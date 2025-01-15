@@ -1,7 +1,13 @@
 @charset "UTF-8";
 
-* {
- 
+@font-face {
+    font-family: 'Jovem serif';
+    src: url(../Fonts/YoungSerif-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'outfit';
+    src: url(../Fonts/Outfit-VariableFont_wght.ttf) format('truetype');
 }
 
 @media screen and (max-width:375px) {
@@ -10,21 +16,67 @@
     }
 }
 
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box
+}
+
 #omelete_img {
     width: 100%;
-   
+    border-radius: 10px;
     border: 2px solid black;
    
 }
 
 body {
-    background-color: burlywood;
-    width: 100vh;
+    background-color:  hsl(30, 54%, 90%);
+    width: calc(100vw - 40px);
     height: 100vh;
+    border: 2px solid red;
+
+    font-family: 'outfit';
+
+    
 }
 
 main {
     padding: 15px;
     background-color: white;
-    margin: 20% 20% 20% 20%;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 500px;
+
+}
+
+h1, h2 {
+    font-family: 'jovem serif';
+}
+
+h1 {
+    color: hsl(24, 5%, 18%);
+}
+
+h2, .num_color {
+    color: hsl(14, 45%, 36%);
+}
+
+h3 {
+    color: hsl(332, 51%, 32%);
+}
+
+td {
+    border: 1px solid black;
+    width: 100px;
+
+}
+
+tr {
+    border: 10px solid blue;
+    
+}
+
+table {
+    border: 2px solid orange;
 }
