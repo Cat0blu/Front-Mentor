@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+* {
+ 
+}
+
+@media screen and (max-width:375px) {
+    body {
+        background-color: red;
+    }
+}
+
+#omelete_img {
+    width: 100%;
+   
+    border: 2px solid black;
+   
+}
+
+body {
+    background-color: burlywood;
+    width: 100vh;
+    height: 100vh;
+}
+
+main {
+    padding: 15px;
+    background-color: white;
+    margin: 20% 20% 20% 20%;
+}
