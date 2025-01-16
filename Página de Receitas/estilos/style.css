@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@font-face {
+/* @font-face {
     font-family: 'Jovem serif';
     src: url(../Fonts/YoungSerif-Regular.ttf) format('truetype');
 }
@@ -8,21 +8,41 @@
 @font-face {
     font-family: 'outfit';
     src: url(../Fonts/Outfit-VariableFont_wght.ttf) format('truetype');
-}
+} */
 
-@media screen and (max-width:375px) {
+@media screen and (max-width: 600px) {
     body {
         background-color: red;
+      
+    }
+
+    
+
+    main {
+        background-color: aqua;
+        padding: 0px;
     }
 }
 
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box
+
+@media screen and (min-width: 1440px) {
+    #omelete_img 
+    {
+    display: block;
+    }
+    #omelete_img00 {
+        display: none;
+    }
 }
 
+#omelete_img00 {
+    width: 100%;
+    margin-bottom: -5px;
+}
+
+
 #omelete_img {
+    display: none;
     width: 100%;
     border-radius: 10px;
     border: 2px solid black;
@@ -30,7 +50,7 @@
 }
 
 body {
-    background-color:  hsl(30, 54%, 90%);
+   
     width: calc(100vw - 40px);
     height: 100vh;
     border: 2px solid red;
@@ -41,12 +61,10 @@ body {
 }
 
 main {
-    padding: 15px;
+    
     background-color: white;
-    margin: auto;
-    border: 2px solid black;
-    border-radius: 10px;
-    width: 500px;
+    width: 95,5%;
+    padding: 10px;
 
 }
 
@@ -67,16 +85,12 @@ h3 {
 }
 
 td {
-    border: 1px solid black;
-    width: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.356);
+    width: 500px;
 
 }
 
-tr {
-    border: 10px solid blue;
-    
-}
 
 table {
-    border: 2px solid orange;
+    border-collapse: collapse;
 }
