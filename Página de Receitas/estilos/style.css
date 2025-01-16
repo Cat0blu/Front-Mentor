@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* @font-face {
+@font-face {
     font-family: 'Jovem serif';
     src: url(../Fonts/YoungSerif-Regular.ttf) format('truetype');
 }
@@ -8,64 +8,28 @@
 @font-face {
     font-family: 'outfit';
     src: url(../Fonts/Outfit-VariableFont_wght.ttf) format('truetype');
-} */
-
-@media screen and (max-width: 600px) {
-    body {
-        background-color: red;
-      
-    }
-
-    
-
-    main {
-        background-color: aqua;
-        padding: 0px;
-    }
 }
 
-
-@media screen and (min-width: 1440px) {
-    #omelete_img 
-    {
-    display: block;
-    }
-    #omelete_img00 {
-        display: none;
-    }
-}
-
-#omelete_img00 {
-    width: 100%;
-    margin-bottom: -5px;
-}
-
-
-#omelete_img {
-    display: none;
-    width: 100%;
-    border-radius: 10px;
-    border: 2px solid black;
-   
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
 body {
-   
+    background-color: hsl(30, 18%, 87%);
     width: calc(100vw - 40px);
     height: 100vh;
-    border: 2px solid red;
-
     font-family: 'outfit';
-
-    
 }
 
 main {
-    
     background-color: white;
-    width: 95,5%;
-    padding: 10px;
+    margin: auto;
+}
 
+#omelete_img {
+    width: 100%;
 }
 
 h1, h2 {
@@ -74,6 +38,7 @@ h1, h2 {
 
 h1 {
     color: hsl(24, 5%, 18%);
+    margin-bottom: 15px;
 }
 
 h2, .num_color {
@@ -82,15 +47,80 @@ h2, .num_color {
 
 h3 {
     color: hsl(332, 51%, 32%);
+    margin-bottom: 7px;
+    margin-top: 30px;
+}
+
+#h2_nutrition {
+    margin-left: 23px;
+}
+
+h2,h3 {
+    position: relative;
+    right: 20px;
+}
+
+#preparation {
+    margin-left: 50px;
+}
+
+#ingredients, #instructrions{
+    margin-left: 20px;
 }
 
 td {
-    border: 1px solid rgba(0, 0, 0, 0.356);
-    width: 500px;
-
+    border: 1px solid rgba(0, 0, 0, 0.233);
+    width: 340px;
+    padding: 7px;
+    padding-left: 15px;
 }
-
 
 table {
     border-collapse: collapse;
+}
+
+li::marker 
+{   
+    color: hsl(14, 45%, 36%);
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 767px) {
+ 
+    #conteudo {
+       padding: 15px;
+    }
+    
+    main {
+        width: 375px;
+        line-height: 1.8em;
+    }
+    
+    h2 {
+        margin-top: 30px;
+        margin-bottom:15px ;
+    }
+}
+
+@media screen and (min-width:768px) {
+    #omelete_img {
+        border-radius: 10px;
+    }
+    
+    main {
+        border-radius: 10px;
+        width: 750px;
+        padding: 20px;
+        margin-top: 20px;
+        line-height: 2em;
+    }
+    
+    h1 {
+        margin-top: 15px;
+    }
+    
+    h1,h2 {
+        margin-top: 30px;
+        margin-bottom:15px ;
+    }
 }
