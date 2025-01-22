@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contrato</title>
+    <link rel="shortcut icon" href="../Cartão do Blog/img/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style.css">
+    <script src="scripts/script.js" defer> </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=check_circle" />
+</head>
+<body>
+    <div id="conteudo_alert" class="alert-hidden">
+        <p id="text_alert"><span class="material-symbols-outlined" id="check_circle" style="color: rgba(255, 255, 255, 0.719);">
+            check_circle 
+            </span> Message Senti ! <br><p style="color: rgba(255, 255, 255, 0.664);">Thanks for completing the form. we´ll be in touch soon !</p></p>
+    </div>
+
+    <main>
+        <div id="conteudo">
+            <h1>Contract Us</h1>
+            <div class="filho" id="f0">
+                <section class="campo_label">
+                    <label for="text_name" >
+                        First Name <span style="color: green;">*</span>
+                    </label>
+                </section>
+                <input type="text" id="text_name" maxlength="20" >
+                <p class="erro hidden">This field is required</p> <!--mensagem de erro no campo-->
+            </div>
+          
+            <div class="filho" id="f1">
+                <section class="campo_label">
+                    <label for="last_name" >
+                        Last Name <span style="color: green;">*</span>
+                    </label>
+                </section>
+                <input type="text" id="last_name" maxlength="20">
+                <p class="erro hidden">This field is required</p> <!--mensagem de erro no campo-->
+            </div>
+
+            <div class="filho" id="f2">
+                <section class="campo_label">
+                    <label for="email" class="campo_label">
+                        Email Adress <span style="color: green;">*</span>
+                    </label>
+                </section>
+                <input type="email" id="email" maxlength="30">
+                <p class="erro hidden">please enter a valid email address</p> <!--mensagem de erro no campo-->
+            </div>
+    
+                <div class="filho" id="f3">
+                    <p >Query Type <span style="color: green;">*</span></p>
+                </div>
+            <div class="filho" id="f4">
+                <div class="campo_radio" onclick="general_click()">
+                    <input type="radio" id="general" name="radios"><label for="general" class="label_message">General enquiry</label>
+                </div>
+            </div> 
+        
+            <div class="filho" id="f5">
+                    <div class="campo_radio" onclick="general_click()">
+                        <input type="radio" id="support" name="radios"><label for="support" class="label_message">Support Request</label>
+                    </div>
+            </div>
+            <p class="erro hidden" id="p0">Please select a query type</p> <!--mensagem de erro no campo-->
+           
+            
+            <div class="filho" id="f6">
+                <div id="campo_message">
+                    <p class="campo_label">Message <span style="color: green;">*</span></p>
+                    <textarea style="resize: none;border-radius: 10px; padding-left: 10px;"></textarea>
+                </div>
+                <p class="erro hidden" id="p1">This field is required</p> <!--mensagem de erro no campo-->
+            </div>
+      
+            <div class="filho" id="f7">
+                <input type="checkbox"  id="permission"> <label for="permission" class="label_message">i consert to being contacted by the team <span style="color: green;">*</span></label>
+            </div>
+            <p class="erro hidden" id="p2">To submit this form, please consent to being contacted</p> <!--mensagem de erro no campo-->
+    
+            <div class="filho" id="f8">
+                <button type="submit" id="submit">Submit
+                   </button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
