@@ -29,7 +29,7 @@ body
     background-size: cover;
     background-position: center center;
     width: 100%;
-    height: 210px;
+    height: 250px;
 }
 
 #star
@@ -45,7 +45,7 @@ body
 main 
 {
   position: absolute;
-  top: 120px;
+  top: 160px;
   width: 400px;
   background-color: white;
   padding: 15px;
@@ -114,6 +114,6 @@ span > p:hover
 
 @media screen and (min-width:800px) {
     main {
-        width: 500px;
+        width: 550px;
     }
 }
