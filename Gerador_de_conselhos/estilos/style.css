@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+
+@font-face {
+    font-family: 'karla';
+    src: url('../fonts/Karla-VariableFont_wght.ttf') format('truetype');
+}
+
+@media screen and (max-width:550px) {
+    #img_pattern-divisor_mobile
+    {
+        display: block;
+    }
+
+    #img_pattern-divisor_desktop
+    {
+        display: none;
+    }
+
+    main 
+    {
+        max-width: 350px;
+    }
+}
+
+@media screen and (min-width:550px) {
+    #img_pattern-divisor_mobile
+    {
+        display: none;
+    }
+
+    #img_pattern-divisor_desktop
+    {
+        display: block;
+    }
+
+    main 
+    {
+        max-width: 500px;
+    }
+
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'karla';
+}
+
+#conteudo 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(218, 23%, 16%);
+    height: 100vh;
+}
+
+main
+{
+    background-color: hsl(217, 19%, 24%);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#text_id
+{
+    color: hsl(150, 100%, 66%);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#ADVICE
+{
+    text-align: center;
+    color: hsl(193, 38%, 86%);
+}
+
+.pattern-divisor
+{
+    position: relative;
+    top: 30px;
+}
+
+
+#circle_icone
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    margin: auto;
+    background-color: hsl(150, 100%, 66%);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    
+}
+
+#circle_icone:hover
+{
+    box-shadow: 3px 3px 30px hsl(150, 100%, 66%);
+    cursor: pointer;
+}
+
+#img_icone
+{
+    width: 40%;
+
+}
