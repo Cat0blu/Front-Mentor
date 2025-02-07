@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de produtos com carrinho</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <script src="scripts/script.js" defer></script>
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    
+   <div id="conteudo">
+        <div id="mensagem_campo">
+            <img src="images/icon-order-confirmed.svg" alt="img.svg">
+            <h1>Order Confirmed</h1>
+            <p>We hope you enjoy your food!</p>
+            
+            <div class="produtos_comprados">
+                    <img src="images/image-tiramisu-thumbnail.jpg" alt="img.jpg">
+                <div><p class="titulo_pc">Classic Tiramisu</p> 
+                    <br>
+                <span class="multiplicador_pc">x1</span><span class="x">x</span> @$<p>5.50</p>
+                <span class="totalProduto_MensagemCampo">5.50</span>
+                </div>
+            </div>
+
+            <div class="produtos_comprados">
+                <img src="images/image-meringue-thumbnail.jpg" alt="img.jpg">
+                <div><p class="titulo_pc">Lemon Meringue Pie</p> 
+                    <br>
+                <span class="multiplicador_pc">x1</span><span class="x">x</span> @$<p>5.00</p>
+                <span class="totalProduto_MensagemCampo">5.00</span>
+                </div>
+            </div>
+
+            <div class="produtos_comprados">
+                <img src="images/image-macaron-thumbnail.jpg" alt="img.jpg">
+                <div><p class="titulo_pc">Macaron Mix of Five</p> 
+                    <br>
+                <span class="multiplicador_pc">x1</span><span class="x">x</span> @$<p>8.00</p>
+                <span class="totalProduto_MensagemCampo">8.00</span>
+                </div>
+            </div>
+
+            <div class="produtos_comprados">
+                <img src="images/image-baklava-thumbnail.jpg" alt="img.jpg">
+                <div><p class="titulo_pc">Pistachio Baklava</p> 
+                    <br>
+                <span class="multiplicador_pc">x1</span><span class="x">x</span> @$<p>4.00</p>
+                <span class="totalProduto_MensagemCampo">4.00</span>
+                </div>
+            </div>
+
+            <div class="produtos_comprados">
+                <img src="images/image-cake-thumbnail.jpg" alt="img.jpg">
+                <div><p class="titulo_pc">Red Velvet Cake</p> 
+                    <br>
+                <span class="multiplicador_pc">x1</span><span class="x">x</span> @$<p>4.50</p>
+                <span class="totalProduto_MensagemCampo">4.50</span>
+                </div>
+            </div>
+
+            <div class="produtos_comprados">
+                <img src="images/image-brownie-thumbnail.jpg" alt="img.jpg">
+                <div><p class="titulo_pc">Salted Caramel Brownie</p> 
+                    <br>
+                <span class="multiplicador_pc">x1</span><span class="x">x</span> @$<p>5.50</p>
+                <span class="totalProduto_MensagemCampo">5.50</span>
+                </div>
+            </div>
+
+            <div class="produtos_comprados">
+                <img src="images/image-creme-brulee-thumbnail.jpg" alt="img.jpg">
+                <div><p class="titulo_pc">Vanilla Bean Crème Brûlée</p> 
+                    <br>
+                <span class="multiplicador_pc">x1</span><span class="x">x</span> @$<p>7.00</p>
+                <span class="totalProduto_MensagemCampo">7.00</span>
+                </div>
+            </div>
+
+            <div class="produtos_comprados">
+                <img src="images/image-panna-cotta-thumbnail.jpg" alt="img.jpg">
+                <div><p class="titulo_pc">Vanilla Panna Cotta</p> 
+                    <br>
+                <span class="multiplicador_pc">x1</span><span class="x">x</span> @$<p>6.50</p>
+                <span class="totalProduto_MensagemCampo">6.50</span>
+                </div>
+            </div>
+
+            <div class="produtos_comprados">
+                <img src="images/image-waffle-thumbnail.jpg" alt="img.jpg">
+                <div><p class="titulo_pc">Waffle with Berries</p> 
+                    <br>
+                <span class="multiplicador_pc">x1</span><span class="x">x</span> @$<p>6.50</p>
+                <span class="totalProduto_MensagemCampo">6.50</span>
+                </div>
+            </div>
+
+            <div id="totalCampo_Final"><p>Total</p> <span id="totalPc"></span></div>
+
+            <button>Start New Order</button>
+        </div>
+        <main>
+            <div id="produtos">
+                <h1>Desserts</h1>
+                <div> 
+                    <img src="images/image-waffle-mobile.jpg" alt="img" class="main_img"> 
+                    <button class="main_button"> <span><img src="images/icon-add-to-cart.svg" alt="img.svg" class="icon_img_add"></span> Add to Card</button>
+
+                    <button class="button_addRemove hidden">
+                    <span class="menos">-</span> 
+                    <p>0</p>
+                    <span class="mais">+</span>
+                    </button>
+
+                    <p class="sub_titulo">Waffle</p>
+                    <p class="titulo_produto">
+                    <strong>Waffle with Berries</strong>
+                    </p>
+
+                    <p>$6.50</p>
+                </div>
+
+                <div> 
+                    <img src="images/image-creme-brulee-mobile.jpg" alt="img" class="main_img"> 
+                    <button class="main_button"><span><img src="images/icon-add-to-cart.svg" alt="img.svg" class="icon_img_add"></span> Add to Card</button>
+
+                    <button class="button_addRemove hidden">
+                        <span class="menos">-</span> 
+                        <p>0</p>
+                        <span class="mais">+</span>
+                    </button>
+
+                    <p class="sub_titulo">Crème Brùlée</p>
+                    <p class="titulo_produto">
+                    <strong>Vanilla Bean Crème Brûlée</strong>
+                    </p>
+                    <p>$7.00</p>
+                </div>
+
+                <div> 
+                    <img src="images/image-macaron-mobile.jpg" alt="img" class="main_img"> 
+                    <button class="main_button"><span><img src="images/icon-add-to-cart.svg" alt="img.svg" class="icon_img_add"></span>  Add to Card</button>
+
+                    <button class="button_addRemove hidden">
+                        <span class="menos">-</span> 
+                        <p>0</p>
+                        <span class="mais">+</span>
+                    </button>
+
+                    <p class="sub_titulo">Macaron</p>
+                    <p class="titulo_produto">
+                    <strong>Macaron Mix of Five
+                    </strong>
+                    </p>
+                    <p>$8.00</p>
+                </div>
+
+                <div> 
+                    <img src="images/image-tiramisu-mobile.jpg" alt="img" class="main_img"> 
+                    <button class="main_button"><span><img src="images/icon-add-to-cart.svg" alt="img.svg" class="icon_img_add"></span> Add to Card</button>
+
+                    <button class="button_addRemove hidden">
+                        <span class="menos">-</span> 
+                        <p>0</p>
+                        <span class="mais">+</span>
+                    </button>
+
+                    <p class="sub_titulo">Tiramisu</p>
+                    <p class="titulo_produto">
+                    <strong>Classic Tiramisu</strong>
+                    </p>
+                    <p>$5.50</p>
+                </div>
+
+                <div> 
+                    <img src="images/image-baklava-mobile.jpg" alt="img" class="main_img"> 
+                    <button class="main_button"><span><img src="images/icon-add-to-cart.svg" alt="img.svg" class="icon_img_add"></span> Add to Card</button>
+
+                    <button class="button_addRemove hidden">
+                        <span class="menos">-</span> 
+                        <p>0</p>
+                        <span class="mais">+</span>
+                    </button>
+
+                    <p class="sub_titulo">Baklava</p>
+                    <p class="titulo_produto">
+                    <strong>Pistachio Baklava</strong>
+                    </p>
+                    <p>$4.00</p>
+                </div>
+
+                <div> 
+                    <img src="images/image-meringue-mobile.jpg" alt="img" class="main_img"> 
+                    <button class="main_button"><span><img src="images/icon-add-to-cart.svg" alt="img.svg" class="icon_img_add"></span> Add to Card</button>
+
+                    <button class="button_addRemove hidden">
+                        <span class="menos">-</span> 
+                        <p>0</p>
+                        <span class="mais">+</span>
+                    </button>
+
+                    <p class="sub_titulo">Pie</p>
+                    <p class="titulo_produto">
+                    <strong>Lemon Meringue Pie</strong>
+                    </p>
+                    <p>$5.00</p>
+                </div>
+
+                <div> 
+                    <img src="images/image-cake-mobile.jpg" alt="img" class="main_img"> 
+                    <button class="main_button"><span><img src="images/icon-add-to-cart.svg" alt="img.svg" class="icon_img_add"></span> Add to Card</button>
+
+                    <button class="button_addRemove hidden">
+                        <span class="menos">-</span> 
+                        <p>0</p>
+                        <span class="mais">+</span>
+                    </button>
+
+                    <p class="sub_titulo">Cake</p>
+                    <p class="titulo_produto">
+                    <strong>Red Velvet Cake</strong>
+                     </p>
+                    <p>$4.50</p>
+                </div>
+
+                <div> 
+                    <img src="images/image-brownie-mobile.jpg" alt="img" class="main_img"> 
+                    <button class="main_button"><span><img src="images/icon-add-to-cart.svg" alt="img.svg" class="icon_img_add"></span> Add to Card</button>
+
+                    <button class="button_addRemove hidden">
+                        <span class="menos">-</span> 
+                        <p>0</p>
+                        <span class="mais">+</span>
+                    </button>
+
+                    <p class="sub_titulo">Brownie</p>
+                    <p class="titulo_produto">
+                    <strong>Salted Caramel Brownie</strong>
+                    </p>
+                    <p>$5.50</p>
+                </div>
+
+                <div> 
+                    <img src="images/image-panna-cotta-mobile.jpg" alt="img" class="main_img"> 
+                    <button class="main_button"><span><img src="images/icon-add-to-cart.svg" alt="img.svg" class="icon_img_add"></span> Add to Card</button>
+
+                    <button class="button_addRemove hidden">
+                        <span class="menos">-</span> 
+                        <p>0</p>
+                        <span class="mais">+</span>
+                    </button>
+
+                    <p class="sub_titulo">Panna Cotta</p>
+                    <p class="titulo_produto">
+                    <strong>Vanilla Panna Cotta</strong>
+                    </p>
+                    <p>$6.50</p>
+                </div>
+            </div>
+
+            <div id="carrinho">
+                <h2>Your Cart( <span id="Number"></span> )</h2>
+
+                <div id="ilustracao">
+                    <img src="images/illustration-empty-cart.svg" alt="">
+                    <p>Your added items will appear here</p>
+                </div>
+                
+                <div class="bloco_carrinho hidden"><p class="text_carrinho">Classic Tiramisu</p>
+                    <p><span class="multiplicador"></span><i>x</i> <span class="rs">@$</span><span class="produto">5.50</span> <span class="cor">$</span><span class="soma_produto"></span>  <span class="remove">x</span></p>
+                </div>
+
+                <div class="bloco_carrinho hidden"><p class="text_carrinho">Lemon Meringue Pie</p>
+                    <p><span class="multiplicador"></span><i>x</i> <span class="rs">@$</span><span class="produto">5.00</span> <span class="cor">$</span><span class="soma_produto"></span> <span class="remove">x</span></p>
+                </div>
+
+                <div class="bloco_carrinho hidden"><p class="text_carrinho">Macaron Mix of Five</p>
+                    <p><span class="multiplicador"></span><i>x</i> <span class="rs">@$</span><span class="produto">8.00</span> <span class="cor">$</span><span class="soma_produto"></span> <span class="remove">x</span></p>
+                </div>
+
+                <div class="bloco_carrinho hidden"><p class="text_carrinho">Pistachio Baklava</p>
+                    <p><span class="multiplicador"></span><i>x</i> <span class="rs">@$</span><span class="produto">4.00</span> <span class="cor">$</span><span class="soma_produto"></span> <span class="remove">x</span></p>
+                </div>
+
+                <div class="bloco_carrinho hidden"><p class="text_carrinho">Red Velvet Cake</p>
+                    <p><span class="multiplicador"></span><i>x</i> <span class="rs">@$</span><span class="produto">4.50</span> <span class="cor">$</span><span class="soma_produto"></span> <span class="remove">x</span></p>
+                </div>
+
+                <div class="bloco_carrinho hidden"><p class="text_carrinho">Salted Caramel Brownie</p>
+                    <p><span class="multiplicador"></span><i>x</i> <span class="rs">@$</span><span class="produto">5.50</span> <span class="cor">$</span><span class="soma_produto"></span> <span class="remove">x</span></p>
+                </div>
+
+                <div class="bloco_carrinho hidden"><p class="text_carrinho">Vanilla Bean Crème Brûlée</p>
+                    <p><span class="multiplicador"></span><i>x</i> <span class="rs">@$</span><span class="produto">7.00</span> <span class="cor">$</span><span class="soma_produto"></span> <span class="remove">x</span></p>
+                </div>
+
+                <div class="bloco_carrinho hidden"><p class="text_carrinho">Vanilla Panna Cotta</p>
+                    <p><span class="multiplicador"></span><i>x</i> <span class="rs">@$</span><span class="produto">6.50</span> <span class="cor">$</span><span class="soma_produto"></span> <span class="remove">x</span></p>
+                </div>
+
+                <div class="bloco_carrinho hidden"><p class="text_carrinho">Waffle with Berries</p>
+                    <p><span class="multiplicador"></span><i>x</i> <span class="rs">@$</span><span class="produto">6.50</span> <span class="cor">$</span><span class="soma_produto"></span> <span class="remove">x</span></p>
+                </div>
+                
+                <div id="bloco_total" class="hidden">Total <span class="cor">$</span><span></span><span id="total">0</span>
+                </div>
+
+                <p id="bloco_carbon_neutral" class="hidden"><img src="images/icon-carbon-neutral.svg" alt="">  This is a <strong>carbon-neutral</strong> delivery</p>
+
+                <div>
+                    <button id="button_submit" class="hidden">
+                        Confirm Order
+                    </button>
+                </div>
+            </div>
+        </main>
+   </div>
+</body>
+</html>

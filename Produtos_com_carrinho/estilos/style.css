@@ -1,0 +1,292 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'carla';
+    src: url('../fonts/RedHatText-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'barlow';
+    src: url('../fonts/Barlow-Bold.ttf') format('truetype');
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'carla';
+    line-height: 1.5em;
+}
+
+#mensagem_campo
+
+{   display: none;
+    background-color: white;
+    position: absolute;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+#mensagem_campo button
+{
+    background-color: orangered;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border: none;
+    width: 100%;
+    padding: 10px;
+}
+
+#mensagem_campo button:hover
+{
+    background-color: rgb(201, 54, 1);
+    cursor: pointer;
+}
+
+#mensagem_campo .produtos_comprados
+{
+    display: none;
+    margin: 20px;
+}
+
+#mensagem_campo .produtos_comprados img
+{
+    display: inline;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.produtos_comprados .multiplicador_pc, .x
+{
+    color: orangered;
+}
+
+.titulo_pc
+{
+    font-weight: bolder;
+}
+
+#mensagem_campo .produtos_comprados p
+{
+    display: inline;
+}
+
+#mensagem_campo .produtos_comprados .totalProduto_MensagemCampo
+{   
+    margin-left: 80px;
+}
+
+#totalCampo_Final
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+#conteudo
+{   
+    background-color: hsl(20, 50%, 98%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+#produtos
+{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1050px;
+}
+
+#produtos > div 
+{
+    margin: auto;
+}
+
+#produtos h1
+{
+    flex-basis: 100%;
+    padding: 50px 0px 20px 20px ;
+    font-family: 'barlow';
+}
+
+
+#produtos .main_img
+{   min-height: 100px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+#produtos .main_img:hover
+{
+    outline: 2px solid orangered;
+}
+
+#produtos .icon_img_add
+{
+    height: 20px;
+    position: relative;
+    top: 3px;
+}
+
+.sub_titulo
+{   
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.562);
+}
+
+
+#produtos .main_button
+{   
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 7px;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    font-weight: bolder;
+    position: relative;
+    bottom: 30px;
+    width: 45%;
+}
+
+#produtos .main_button:hover
+{
+    border: 2px solid orangered;
+}
+
+.button_addRemove
+{   
+    background-color: orangered;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    border: none;
+    width: 45%;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+    bottom: 30px;
+}
+.button_addRemove span
+{   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 255, 255);
+    width: 15px;
+    height: 15px;
+    font-size: 1.6em;
+}
+
+.button_addRemove span:hover
+{
+    background-color: rgb(211, 59, 4);
+    cursor: pointer;
+}
+
+#carrinho
+{  
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
+    height: 50%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.274);
+}
+
+#carrinho h2
+{
+    color: hsl(14, 86%, 42%);
+    text-align: center;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.bloco_carrinho
+{
+    margin: 30px 30px;
+}
+
+.bloco_carrinho .text_carrinho
+{
+    font-weight: bolder;
+}
+
+.bloco_carrinho .multiplicador, i
+{
+    color: hsl(14, 86%, 42%);
+    font-weight: bolder;
+}
+
+.bloco_carrinho .produto, .rs
+{
+    color: rgba(0, 0, 0, 0.432);
+}
+
+.remove
+{   
+    float: right;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 3px;
+}
+
+.remove:hover
+{
+    background-color: rgb(216, 214, 214);
+    cursor: pointer;
+}
+
+#bloco_total #total, span
+{
+    font-weight: bolder;
+}
+
+#button_submit
+{
+    background-color: orangered;
+    color: rgba(255, 255, 255, 0.747);
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+#button_submit:hover
+{
+    background-color: hsl(14, 86%, 37%)
+    ;
+    color: white;
+}
+
+#bloco_carbon_neutral
+{
+    background-color: hsl(20, 50%, 98%);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.24);
+}
+
+#bloco_carbon_neutral img
+{
+    position: relative;
+    top: 7px;
+}
