@@ -198,6 +198,11 @@ main
     cursor: pointer;
 }
 
+.button_addRemove p
+{
+    font-size: 1.5em;
+}
+
 #carrinho
 {  
     margin: auto;

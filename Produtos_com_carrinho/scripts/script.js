@@ -156,7 +156,7 @@ addRemove.forEach((oneButton) =>{
                     var tituloPc = one_produto.querySelector('.titulo_pc')
                     var multiplicadorPc = one_produto.querySelector('.multiplicador_pc')
                     var somaProduto = one_produto.querySelector('.totalProduto_MensagemCampo')
-                    var produtoValor = multiplicadorPc.nextElementSibling
+                    var produtoValor = multiplicadorPc.nextElementSibling.nextElementSibling
                     var multiplicar = produtoValor.innerHTML * num_multiplicador
                     if(tituloPc.innerText === oneText.innerText)
                     {   
@@ -208,18 +208,19 @@ addRemove.forEach((oneButton) =>{
                     var multiplicadorPc = one_produto.querySelector('.multiplicador_pc')
                     var somaProduto = one_produto.querySelector('.totalProduto_MensagemCampo')
                     
-                    var produtoValor = multiplicadorPc.nextElementSibling
+                    var produtoValor = multiplicadorPc.nextElementSibling.nextElementSibling
                     var multiplicar = produtoValor.innerHTML * num_multiplicador
-
-                    somaProduto.innerHTML = '$' + multiplicar.toFixed(2)
-            
+                    
                     if(tituloPc.innerText === oneText.innerText)
                     {
                         multiplicadorPc.innerHTML = num_multiplicador
+                        somaProduto.innerHTML = '$' + multiplicar.toFixed(2)
+                        
                     }
 
-                    if(multiplicadorPc < 1)
+                    if(multiplicadorPc.innerHTML < 1)
                     {   
+                        window.alert('Caiu aqui')
                         one_produto.style.display = 'none'
                     }
                 })
