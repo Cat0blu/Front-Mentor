@@ -220,7 +220,7 @@ addRemove.forEach((oneButton) =>{
 
                     if(multiplicadorPc.innerHTML < 1)
                     {   
-                        window.alert('Caiu aqui')
+                        
                         one_produto.style.display = 'none'
                     }
                 })
