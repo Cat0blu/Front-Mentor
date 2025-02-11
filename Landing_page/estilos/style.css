@@ -32,13 +32,6 @@
 
     #tela_Monitor 
     {  height: 200px;  }
-
-
-    #text_footer
-        {
-            flex-direction: column;
-        }
-    
 }
 
 *
@@ -206,11 +199,13 @@ footer
 #text_footer
 {  display: flex;
    flex-wrap: wrap;
-   max-width: 400px;  
-   min-width: 200px;}
+   max-width: 600px;  
+   min-width: 200px;
+    border: 2px solid black;}
 
 #text_footer p
-{  margin: 0px 20px 20px 20px;}
+{  margin: 0px 20px 20px 20px;
+   width: 150px;}
 
 #logosRedes
 {  display: flex;
