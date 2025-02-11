@@ -19,7 +19,7 @@
     {  background-image: url('../imgs/bg-header-desktop.png')  }
 
     .telasImg
-    {  height: 300px;  }
+    {  height: 200px;  }
 
     #tela_Monitor
     {  height: 300px;  }
@@ -30,9 +30,6 @@
     #conteudo
     {  background-image: url('../imgs/bg-header-mobile.png');  }
 
-    .telasImg
-    {  height: 200px;  }
-    
     #tela_Monitor 
     {  height: 200px;  }
     
@@ -203,10 +200,12 @@ footer
 #text_footer
 {  display: flex;
    flex-wrap: wrap;
-   max-width: 400px;  }
+   max-width: 400px;  
+   min-width: 200px;}
 
 #text_footer p
-{  margin: 0px 20px 20px 20px;  }
+{  margin: 0px 20px 20px 20px;  
+    border: 2px solid black;}
 
 #logosRedes
 {  display: flex;
