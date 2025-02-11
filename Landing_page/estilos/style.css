@@ -11,10 +11,6 @@
    #conteudo
    {  background-image: url('../imgs/bg-header-desktop.png');  }
 
-   .telasImg
-   {  height: 200px;  }
-
-
 }
 
 @media screen and (max-width:800px) 
@@ -36,6 +32,10 @@
 
     #tela_Monitor 
     {  height: 200px;  }
+
+    .telasImg
+    {  height: 200px;  }
+
 }
 
 *
