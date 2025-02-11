@@ -11,6 +11,10 @@
    #conteudo
    {  background-image: url('../imgs/bg-header-desktop.png');  }
 
+   .telasImg
+   {  height: 200px;  }
+
+
 }
 
 @media screen and (max-width:800px) 
@@ -200,8 +204,7 @@ footer
 {  display: flex;
    flex-wrap: wrap;
    max-width: 600px;  
-   min-width: 200px;
-    border: 2px solid black;}
+   min-width: 200px;}
 
 #text_footer p
 {  margin: 0px 20px 20px 20px;
