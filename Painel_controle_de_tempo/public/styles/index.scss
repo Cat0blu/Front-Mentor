@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+@use "base/config.scss";
+@use "layout/header";
+@use "layout/main";
+
+* { 
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:'rubik';
+}    
+    
+#conteudo
+{   
+    background-color: config.$very_dark_blue ;
+    @include config.flexPropriedade(center,center);
+}
+
+@media screen and (max-width:941px) {
+
+    header {
+        margin-top: 100px;
+        flex-basis: 85%;
+        max-width: 340px;
+    
+        #header_head
+        {   
+            height: 120px;
+            @include config.flexPropriedade(center,center);
+           
+            img 
+            {   
+                position: relative;
+                bottom: 10px;
+                margin-right: 10px;
+                height: 60px
+            }
+
+            #text_header
+            {   
+                position: relative;
+                bottom: 30px;
+                
+                height: 75px;
+             
+                p 
+                {
+                    position: relative;
+                    top: 5px;
+                }
+
+                #campo_h1 
+                {   
+                   h1 
+                   {
+                     font-size: 1.2em
+                   }
+                }
+            }
+        }
+
+        #header_body
+        {
+            @include config.flexPropriedade(space-around,normal);
+        }
+    }
+
+    main
+    {   
+        flex-basis: 85%;
+        
+        margin-bottom: 100px;
+        section 
+        {
+          
+          margin-top: 30px;
+          
+          div 
+          {
+            height: 130px;
+            p
+            {
+                margin-bottom: 15px;
+            }
+            h1 
+            {
+              display: inline;
+              width: 200px;
+              margin-right: 100px;
+            }
+
+          }
+        }
+    }
+}
+
+@media screen and (min-width:941px){
+    #conteudo
+    {
+        height: 100vw;
+    }
+
+    header {
+        max-width: 200px;
+    }
+
+    main 
+    {
+        height: 450px;
+        section 
+        {
+            width: 200px;
+        }
+    }
+    
+}
+
+

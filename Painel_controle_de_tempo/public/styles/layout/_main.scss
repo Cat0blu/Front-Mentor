@@ -1,0 +1,105 @@
+@use "../base/config.scss";
+
+main {
+  @include config.flexPropriedade(space-evenly, center);
+  color: white;
+  max-width: 720px;
+  
+
+  section 
+  {
+    border-radius: 10px;
+   
+
+    div 
+    {  
+        background-color: config.$dark_blue;
+        position: relative;
+        border-radius: 10px;
+        padding: 20px;
+        height: 170px;
+        margin-top: 30px;
+
+        p 
+        {  
+            /*alteravel */
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            img
+            {
+                
+                height: 3px;
+                
+            }
+        }
+
+
+        h1 
+        {
+            margin: 20px 0px 10px 0px;
+            font-weight: 100;
+            font-size: 2.5em
+        }
+
+        #value_before_work, #value_before_play, #value_before_study, #value_before_exercise, #value_before_social, #value_before_selfCare
+        {
+            @include config.p_subtext();
+            display: inline
+        }
+
+        &:hover
+        {
+            background-color: config.$dark_blue_clear;
+            height: 180px;
+        }
+    
+    };
+
+    &#campo_work,&#campo_play,&#campo_study,&#campo_exercise,&#campo_social,&#campo_selfCare
+    {   
+        overflow: hidden;
+        .icon_img
+        {
+            height: 60px;
+            float: right;
+            position: relative;
+            bottom: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    &#campo_work
+    {   
+        background-color: config.$ligh_red;
+    };
+
+    &#campo_play
+    {
+        
+        background-color: config.$soft_blue;
+    }
+
+    &#campo_study
+    {
+        background-color: config.$red_pink;
+    }
+
+    &#campo_exercise
+    {
+        background-color: config.$lime_green;
+    }
+
+    &#campo_social
+    {
+        background-color: config.$violet;
+    }
+
+    &#campo_selfCare
+    {
+        background-color: config.$soft_orange;
+    }
+  }
+
+  
+}

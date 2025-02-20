@@ -1,0 +1,15 @@
+
+@mixin flexPropriedade($just, $ali)
+{
+    display: flex;
+    justify-content: $just;
+    align-items: $ali;
+    flex-wrap: wrap
+}
+
+@mixin p_subtext()
+{
+    font-weight: 10;
+    opacity: 0.6;
+    font-size: 0.7em
+}

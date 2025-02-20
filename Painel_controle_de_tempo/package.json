@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "observar": "sass --watch public/styles/index.scss  public/styles/base/index.css",
+    "server": "npx http-server public"
+  },
+  "devDependencies": {
+    "sass": "^1.85.0"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

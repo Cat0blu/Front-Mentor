@@ -1,0 +1,215 @@
+@font-face {
+  font-family: "rubik";
+  src: url("../../Fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+}
+header {
+  background-color: hsl(246, 80%, 60%);
+  color: white;
+  border-radius: 10px;
+  line-height: 1.9em;
+}
+header #header_head {
+  background-color: hsl(246, 80%, 60%);
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  top: 8px;
+}
+header #header_head img {
+  height: 70px;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+header #header_head p {
+  opacity: 0.6;
+  font-size: 0.7em;
+  margin-top: 20px;
+}
+header #header_head #campo_h1 {
+  display: flex;
+  justify-content: normal;
+  align-items: normal;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+header #header_head #campo_h1 h1 {
+  font-weight: 100;
+  padding-bottom: 5px;
+  font-size: 2em;
+  margin-right: 10px;
+}
+header #header_body {
+  padding: 20px;
+  background-color: hsl(235, 46%, 20%);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+header #header_body p {
+  opacity: 0.6;
+  font-size: 0.9em;
+  margin-top: 5px;
+  cursor: pointer;
+}
+header #header_body p:hover {
+  background-color: rgba(255, 255, 255, 0.055);
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+  max-width: 720px;
+}
+main section {
+  border-radius: 10px;
+}
+main section div {
+  background-color: hsl(235, 46%, 20%);
+  position: relative;
+  border-radius: 10px;
+  padding: 20px;
+  height: 170px;
+  margin-top: 30px;
+}
+main section div p {
+  /*alteravel */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+main section div p img {
+  height: 3px;
+}
+main section div h1 {
+  margin: 20px 0px 10px 0px;
+  font-weight: 100;
+  font-size: 2.5em;
+}
+main section div #value_before_work, main section div #value_before_play, main section div #value_before_study, main section div #value_before_exercise, main section div #value_before_social, main section div #value_before_selfCare {
+  font-weight: 10;
+  opacity: 0.6;
+  font-size: 0.7em;
+  display: inline;
+}
+main section div:hover {
+  background-color: hsla(236, 45%, 20%, 0.555);
+  height: 180px;
+}
+main section#campo_work, main section#campo_play, main section#campo_study, main section#campo_exercise, main section#campo_social, main section#campo_selfCare {
+  overflow: hidden;
+}
+main section#campo_work .icon_img, main section#campo_play .icon_img, main section#campo_study .icon_img, main section#campo_exercise .icon_img, main section#campo_social .icon_img, main section#campo_selfCare .icon_img {
+  height: 60px;
+  float: right;
+  position: relative;
+  bottom: 10px;
+  padding-right: 10px;
+}
+main section#campo_work {
+  background-color: hsl(15, 100%, 70%);
+}
+main section#campo_play {
+  background-color: hsl(195, 74%, 62%);
+}
+main section#campo_study {
+  background-color: hsl(348, 100%, 68%);
+}
+main section#campo_exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+main section#campo_social {
+  background-color: hsl(264, 64%, 52%);
+}
+main section#campo_selfCare {
+  background-color: hsl(43, 84%, 65%);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "rubik";
+}
+
+#conteudo {
+  background-color: hsl(226, 43%, 10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 941px) {
+  header {
+    margin-top: 100px;
+    flex-basis: 85%;
+    max-width: 340px;
+  }
+  header #header_head {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  header #header_head img {
+    position: relative;
+    bottom: 10px;
+    margin-right: 10px;
+    height: 60px;
+  }
+  header #header_head #text_header {
+    position: relative;
+    bottom: 30px;
+    height: 75px;
+  }
+  header #header_head #text_header p {
+    position: relative;
+    top: 5px;
+  }
+  header #header_head #text_header #campo_h1 h1 {
+    font-size: 1.2em;
+  }
+  header #header_body {
+    display: flex;
+    justify-content: space-around;
+    align-items: normal;
+    flex-wrap: wrap;
+  }
+  main {
+    flex-basis: 85%;
+    margin-bottom: 100px;
+  }
+  main section {
+    margin-top: 30px;
+  }
+  main section div {
+    height: 130px;
+  }
+  main section div p {
+    margin-bottom: 15px;
+  }
+  main section div h1 {
+    display: inline;
+    width: 200px;
+    margin-right: 100px;
+  }
+}
+@media screen and (min-width: 941px) {
+  #conteudo {
+    height: 100vw;
+  }
+  header {
+    max-width: 200px;
+  }
+  main {
+    height: 450px;
+  }
+  main section {
+    width: 200px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
