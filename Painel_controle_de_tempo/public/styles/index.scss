@@ -9,8 +9,8 @@
     margin: 0px;
     box-sizing: border-box;
     font-family:'rubik';
-}    
-    
+}
+
 #conteudo
 {   
     background-color: config.$very_dark_blue ;
@@ -96,13 +96,15 @@
 }
 
 @media screen and (min-width:941px){
+
     #conteudo
     {
-        height: 100vw;
+        height: 100vh;
     }
 
     header {
         max-width: 200px;
+       
     }
 
     main 

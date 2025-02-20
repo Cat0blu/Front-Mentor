@@ -18,18 +18,17 @@ main {
         border-radius: 10px;
         padding: 20px;
         height: 170px;
-        margin-top: 30px;
+        margin-top: 35px;
 
         p 
         {  
-            /*alteravel */
             display: flex;
             justify-content: space-between;
             width: 100%;
             img
             {
                 
-                height: 3px;
+                height: 4px;
                 
             }
         }
@@ -60,8 +59,9 @@ main {
     {   
         overflow: hidden;
         .icon_img
-        {
+        {   
             height: 60px;
+            bottom: 6px;
             float: right;
             position: relative;
             bottom: 10px;
@@ -76,7 +76,6 @@ main {
 
     &#campo_play
     {
-        
         background-color: config.$soft_blue;
     }
 
@@ -100,6 +99,4 @@ main {
         background-color: config.$soft_orange;
     }
   }
-
-  
 }
