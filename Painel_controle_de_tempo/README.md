@@ -1,5 +1,10 @@
 # PROJECT: Painel de controle de tempo #
 
+- Sobre: 
+    # Esse projeto tem a ideia de criar um "painel de controle de tempo" onde o usuario pode gerenciar o seu tempo gasto com as atividades diarias, semanais e mensais escrevendo-as em um json. 
+
+[IMPORTANTE]-ACESSE A PAGINA "public" para ter acesso ao index.html e ao projeto completo.     
+
 - Ferramentas utilizada
     - Html(semantica)
     - Css e sass(estilos)

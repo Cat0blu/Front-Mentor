@@ -20,25 +20,14 @@ var NewSelfCareValue = window.document.querySelector('#selfCare_value')
 var BeforeSelfCareValue = window.document.querySelector('#value_before_selfCare')
 
 
-//tarefas, EXs.: "Work"; "Play"; "Study"; "Exercise"; "Social"; "Self Care" 
-var nameTarefa = "Self Care" 
-// var periodo
-
-window.alert('[campo alert]')
-
-//.................................
-
 //logica relacionada ao opcao_geradorTempo//
-
-
 opcao_geradorTempo.forEach((opcao) =>{
   
   opcao.addEventListener('click', ()=>{
-    window.alert('clicou!')
     opcao.style.opacity = '1'
-    //;;;;;;;;;;;;;;;
+    
     jsonTarefas(periodo = opcao.innerHTML.toLocaleLowerCase())
-    //;;;;;;;;;;;;;;;
+    
     
     if(opcao.previousElementSibling)
     { 
@@ -59,30 +48,12 @@ opcao_geradorTempo.forEach((opcao) =>{
         depois.nextElementSibling.style.opacity = '0.6'
       }
     }
-    
   })
 })
 
-// opcao_geradorTempo.forEach((opcao)=>{
-//   if(window.getComputedStyle(opcao).opacity === '1' )
-//   {
-//     window.alert('opacidade é igual a "1"')
-//     periodo = opcao.innerHTML.toLocaleLowerCase()
-//   }
-
-//   else
-//   {
-//     window.alert('[Negativo] opacidade não é 1"')
-//   }
-// })
-
-//.........................................
 
 function jsonTarefas(periodo="daily")
-{//;;;;;;;;;;;;;
-
-
-
+{
 fetch('/scripts/data.json')
 .then((response) =>{
   if(!response.ok)
@@ -93,9 +64,7 @@ fetch('/scripts/data.json')
 })
 
 .then((data)=>{
-  window.console.log('arquivo:', data)
-
-  //alterações do ultimo ponto seguro:
+  window.console.log('arquivo:', data)//visualização online de json
   const workData = data.find((item) =>  {
     return item.title === "Work"})
   const workValue = workData ? workData.timeframes[periodo].current : null
@@ -138,8 +107,6 @@ fetch('/scripts/data.json')
   const selfCareBeforeValue = selfCareData ? selfCareData.timeframes[periodo].previous : null
   NewSelfCareValue.innerHTML = selfCareValue + "hrs"
   BeforeSelfCareValue.innerHTML = "Last Week -" + selfCareBeforeValue + "hrs"
-
-  //.............................................................................
 })
 
 .catch((error) =>{
@@ -148,6 +115,5 @@ fetch('/scripts/data.json')
 
 }
 
-//;;;;;;
 jsonTarefas()
 
