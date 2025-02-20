@@ -2,5 +2,5 @@
 package-lock.json
 
 ## local dos pacotes instalados
-node_modeles/
+node_modules/
 
