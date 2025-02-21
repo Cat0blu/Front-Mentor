@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "fontInter";
+  src: url("../../fonts/Inter-VariableFont_slnt_wght.ttf") format("truetype");
+}
+#bloco00 {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3em;
+}
+
+#bloco01 #img_mobile {
+  height: 320px;
+}
+#bloco01 #img_desktop {
+  height: 400px;
+}
+#bloco01 h1 {
+  font-size: 3em;
+  line-height: 1em;
+  margin-top: 20px;
+}
+
+#bloco02 {
+  display: flex;
+  flex-wrap: wrap;
+}
+#bloco02 p {
+  color: hsl(236, 13%, 42%);
+}
+#bloco02 button {
+  padding: 10px;
+  margin-top: 20px;
+  background-color: hsl(5, 85%, 63%);
+  border: none;
+  font-weight: bolder;
+  width: 150px;
+}
+
+#bloco03 {
+  background-color: hsl(240, 100%, 5%);
+  padding: 20px;
+  padding-bottom: 1px;
+}
+#bloco03 h2 {
+  color: hsl(35, 77%, 62%);
+}
+#bloco03 h3 {
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+#bloco03 p {
+  color: hsl(236, 13%, 42%);
+  margin-bottom: 30px;
+}
+
+#bloco04 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+#bloco04 .sub_bloco {
+  display: flex;
+  max-width: 350px;
+}
+#bloco04 .sub_bloco img {
+  height: 150px;
+  margin-top: 30px;
+}
+#bloco04 .sub_bloco .text_sub_bloco {
+  margin-top: 45px;
+  margin-left: 20px;
+}
+#bloco04 .sub_bloco .text_sub_bloco h3 {
+  font-size: 2em;
+  color: hsl(5, 85%, 63%);
+  margin-bottom: 10px;
+}
+#bloco04 .sub_bloco .text_sub_bloco .p_bolder {
+  font-weight: bolder;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+#bloco04 .sub_bloco .text_sub_bloco p {
+  font-size: 0.9em;
+  line-height: 1.6em;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "fontInter";
+}
+
+#conteudo {
+  display: grid;
+  justify-content: center;
+  padding: 20px;
+  width: 70%;
+  margin: auto;
+  row-gap: 20px;
+}
+#conteudo #barraSuperior_de_menu {
+  display: none;
+  justify-content: end;
+}
+#conteudo #barraSuperior_de_menu p {
+  margin-left: 20px;
+}
+@media screen and (min-width: 900px) {
+  #conteudo #img_mobile {
+    display: none;
+  }
+  #conteudo #img_desktop {
+    display: block;
+  }
+  #conteudo #icon_menu {
+    display: none;
+  }
+  #conteudo #barraSuperior_de_menu {
+    display: flex;
+  }
+}
+@media screen and (max-width: 900px) {
+  #conteudo #img_mobile {
+    display: block;
+  }
+  #conteudo #img_desktop {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

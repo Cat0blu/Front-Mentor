@@ -1,0 +1,31 @@
+
+@use "../base/config.scss";
+
+#bloco03
+{
+    background-color: config.$very_dark_blue;
+    padding: 20px;
+    padding-bottom: 1px;
+
+   h2 
+   {
+    color: config.$soft_orange;
+   
+   }
+
+   h3 
+   {
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 20px;
+   }
+
+   p 
+   {
+    color: config.$dark_grayish_blue;
+    margin-bottom: 30px;
+ 
+   }
+ 
+   }
+  

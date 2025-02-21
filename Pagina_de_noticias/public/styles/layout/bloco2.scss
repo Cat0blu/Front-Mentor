@@ -1,0 +1,22 @@
+
+@use "../base/config.scss";
+
+#bloco02
+{
+    display: flex;
+    flex-wrap: wrap;
+    p 
+    {
+        color: config.$dark_grayish_blue;
+    }
+    button 
+    {
+        padding: 10px;
+        margin-top: 20px;
+        background-color: config.$soft_red;
+        border: none;
+        font-weight: bolder;
+        width: 150px;//definidos
+    }
+
+}

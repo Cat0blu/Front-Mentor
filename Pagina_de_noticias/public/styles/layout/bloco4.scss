@@ -1,0 +1,46 @@
+
+@use "../base/config.scss";
+
+#bloco04 
+{
+   display: flex;
+   flex-wrap: wrap;
+   margin-bottom: 50px;
+    .sub_bloco
+    {   
+        display: flex;
+        max-width: 350px;
+        img
+        {
+            
+           
+            height: 150px;//definidos
+            margin-top: 30px;
+        }
+
+        .text_sub_bloco
+        {   margin-top: 45px;
+            margin-left: 20px;
+            
+            h3 
+            {   font-size: 2em;
+                color: config.$soft_red;
+                margin-bottom: 10px;
+            }
+
+            .p_bolder
+            {
+                font-weight: bolder;
+                font-size: 1.1em;
+                margin-bottom: 5px ;
+                
+            }
+
+            p {
+                font-size: 0.9em;
+                line-height: 1.6em;
+                
+            }
+        }
+    }
+}

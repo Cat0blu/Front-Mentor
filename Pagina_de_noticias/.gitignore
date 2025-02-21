@@ -1,0 +1,5 @@
+# local das instalações do node
+node_modules/
+
+#lista de biliotecas instaladas
+package-lock.json

@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+@use "base/config.scss";
+@use "layout/bloco0.scss";
+@use "layout/bloco1.scss";
+@use "layout/bloco2.scss";
+@use "layout/bloco3.scss";
+@use "layout/bloco4.scss";
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'fontInter';
+}
+
+//mobile first
+#conteudo 
+{   
+    display: grid;
+    justify-content: center;
+    padding: 20px;
+    width: 70%;//definidos
+    margin: auto;
+    row-gap: 20px;
+
+    #barraSuperior_de_menu
+    {
+        display: none;
+        justify-content: end;
+        
+       p 
+       {
+        margin-left: 20px;
+       }
+
+    }
+
+    @media screen and (min-width:900px) {
+        #img_mobile
+        {
+            display: none;
+        }
+    
+        #img_desktop
+        {
+            display: block;
+        }
+
+        #icon_menu
+        {
+            display: none;
+        }
+
+        #barraSuperior_de_menu
+        {
+            display: flex;
+        }
+
+
+    }
+    
+    @media screen and (max-width:900px) {
+        #img_mobile
+        {
+            display: block;
+        }
+    
+        #img_desktop
+        {
+            display: none;
+        }
+
+       
+    }
+}
+
+
+
+
