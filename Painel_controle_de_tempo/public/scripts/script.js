@@ -54,7 +54,7 @@ opcao_geradorTempo.forEach((opcao) =>{
 
 function jsonTarefas(periodo="daily")
 {
-fetch('https://github.com/Cat0blu/Front-Mentor/blob/main/Painel_controle_de_tempo/public/scripts/data.json')//servidor local não configurado para suporte à https
+fetch('https://cat0blu.github.io/Front-Mentor/Painel_controle_de_tempo/public/scripts/data.json')//servidor local não configurado para suporte à https
 .then((response) =>{
   if(!response.ok)
   {
