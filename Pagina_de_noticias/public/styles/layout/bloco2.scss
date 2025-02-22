@@ -16,7 +16,13 @@
         background-color: config.$soft_red;
         border: none;
         font-weight: bolder;
-        width: 150px;//definidos
-    }
+        width: 150px;
 
+        &:hover
+        {
+            color: white;
+            background-color: config.$very_dark_blue;
+            cursor: pointer;
+        }
+    }
 }

@@ -12,9 +12,7 @@
         max-width: 350px;
         img
         {
-            
-           
-            height: 150px;//definidos
+            height: 150px;
             margin-top: 30px;
         }
 
@@ -26,6 +24,7 @@
             {   font-size: 2em;
                 color: config.$soft_red;
                 margin-bottom: 10px;
+                
             }
 
             .p_bolder
@@ -33,7 +32,11 @@
                 font-weight: bolder;
                 font-size: 1.1em;
                 margin-bottom: 5px ;
-                
+                &:hover
+                {
+                    color: config.$soft_red;
+                    cursor: pointer;
+                }
             }
 
             p {

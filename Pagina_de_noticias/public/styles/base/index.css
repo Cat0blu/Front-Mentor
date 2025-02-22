@@ -14,7 +14,7 @@
   height: 320px;
 }
 #bloco01 #img_desktop {
-  height: 400px;
+  height: 300px;
 }
 #bloco01 h1 {
   font-size: 3em;
@@ -37,6 +37,11 @@
   font-weight: bolder;
   width: 150px;
 }
+#bloco02 button:hover {
+  color: white;
+  background-color: hsl(240, 100%, 5%);
+  cursor: pointer;
+}
 
 #bloco03 {
   background-color: hsl(240, 100%, 5%);
@@ -50,6 +55,10 @@
   color: white;
   margin-top: 30px;
   margin-bottom: 20px;
+}
+#bloco03 h3:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
 }
 #bloco03 p {
   color: hsl(236, 13%, 42%);
@@ -83,6 +92,10 @@
   font-size: 1.1em;
   margin-bottom: 5px;
 }
+#bloco04 .sub_bloco .text_sub_bloco .p_bolder:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
+}
 #bloco04 .sub_bloco .text_sub_bloco p {
   font-size: 0.9em;
   line-height: 1.6em;
@@ -95,6 +108,35 @@
   font-family: "fontInter";
 }
 
+#campo_menu_mobile {
+  z-index: 1;
+  position: absolute;
+  background-color: white;
+  display: none;
+  justify-content: space-between;
+  left: 30%;
+  width: 70%;
+  height: 1850px;
+  padding: 20px;
+}
+#campo_menu_mobile #campo_texts_menu {
+  margin-top: 100px;
+}
+#campo_menu_mobile #campo_texts_menu p {
+  margin-bottom: 20px;
+}
+#campo_menu_mobile #campo_texts_menu p:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+#campo_menu_mobile #close_menu {
+  cursor: pointer;
+}
+
+body {
+  background-color: white;
+}
+
 #conteudo {
   display: grid;
   justify-content: center;
@@ -103,12 +145,19 @@
   margin: auto;
   row-gap: 20px;
 }
+#conteudo #icon_menu {
+  cursor: pointer;
+}
 #conteudo #barraSuperior_de_menu {
   display: none;
   justify-content: end;
 }
 #conteudo #barraSuperior_de_menu p {
   margin-left: 20px;
+}
+#conteudo #barraSuperior_de_menu p:hover {
+  cursor: pointer;
+  color: hsl(35, 77%, 62%);
 }
 @media screen and (min-width: 900px) {
   #conteudo #img_mobile {
