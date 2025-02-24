@@ -2,9 +2,9 @@
 
 ## Sobre: - Esse projeto simula uma página de noticias, utilizando grid e flex.
 
-[IMPORTANTE]-ACESSE A PAGINA "public" para ter acesso ao index.html e ao projeto completo.     
+[IMPORTANTE]-Acesse a pasta "public" para ter acesso ao index.html e ao projeto completo.     
 
-- Ferramentas utilizada
+- Ferramentas utilizadas
     - Html(semantica)
     - Css e sass(estilos)
     - Javscript(funcionalidades, interatividade)

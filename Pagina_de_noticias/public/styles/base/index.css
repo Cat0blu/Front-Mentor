@@ -173,7 +173,7 @@ body {
   cursor: pointer;
   color: hsl(35, 77%, 62%);
 }
-@media screen and (min-width: 1460px) {
+@media screen and (min-width: 1000px) {
   #conteudo #img_mobile {
     display: none;
   }
@@ -228,7 +228,7 @@ body {
     grid-column: 1/4;
   }
 }
-@media screen and (max-width: 1460px) {
+@media screen and (max-width: 1000px) {
   #conteudo #img_mobile {
     display: block;
   }
