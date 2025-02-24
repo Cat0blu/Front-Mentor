@@ -34,6 +34,7 @@
                 font-size: 1.1em;
                 margin-bottom: 5px ;
                 color: black;
+                transition: color 0.5s;
                 &:hover
                 {
                     color: config.$soft_red;

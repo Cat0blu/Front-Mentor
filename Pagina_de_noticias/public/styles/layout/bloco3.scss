@@ -19,6 +19,7 @@
     color: white;
     margin-top: 30px;
     margin-bottom: 10px;
+    transition: color 0.5s;
     &:hover 
     {
      color: config.$soft_orange;

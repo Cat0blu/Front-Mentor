@@ -57,10 +57,10 @@ body
     display: grid;
     justify-content: center;
     padding: 20px;
-    width: 70%;
+    width: 100%;
     margin: auto;
+    column-gap: 20px;
     row-gap: 40px;
-    column-gap: 15px;
 
     #icon_menu
     {
@@ -70,13 +70,13 @@ body
     #barraSuperior_de_menu
     {
         display: none;
-        justify-content: end;
         font-family: 'fontInter';
-        
+        margin-right: 65px;
        p 
        {
         margin-left: 20px;
-        font-size: 0.8em;
+        font-size: 0.6em;
+        transition: color 0.5s;
 
         &:hover 
         {
@@ -105,6 +105,7 @@ body
         #barraSuperior_de_menu
         {
             display: flex;
+            color: config.$dark_grayish_blue;
         }
 
             #bloco00 
@@ -142,10 +143,10 @@ body
 
             #bloco03
             {
-               grid-column: 3;
+               grid-column: 2;
                grid-row: 2/4;
                height: 98%;
-               max-width: 690px;
+               max-width: 310px;
                h2 
                {
                 font-size: 2em;
