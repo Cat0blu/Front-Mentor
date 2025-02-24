@@ -6,6 +6,7 @@
    display: flex;
    flex-wrap: wrap;
    margin-bottom: 50px;
+   font-family: 'fontInter';
     .sub_bloco
     {   
         display: flex;
@@ -32,6 +33,7 @@
                 font-weight: bolder;
                 font-size: 1.1em;
                 margin-bottom: 5px ;
+                color: black;
                 &:hover
                 {
                     color: config.$soft_red;
@@ -42,7 +44,7 @@
             p {
                 font-size: 0.9em;
                 line-height: 1.6em;
-                
+                color: config.$dark_grayish_blue;
             }
         }
     }

@@ -3,8 +3,13 @@
 
 #bloco02
 {
-    display: flex;
-    flex-wrap: wrap;
+    font-family: 'fontInter';
+    h1 
+    {   
+        font-size: 3em;
+        line-height: 1em;
+        margin-bottom: 20px;
+    }
     p 
     {
         color: config.$dark_grayish_blue;

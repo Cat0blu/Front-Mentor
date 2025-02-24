@@ -2,29 +2,36 @@
   font-family: "fontInter";
   src: url("../../fonts/Inter-VariableFont_slnt_wght.ttf") format("truetype");
 }
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("../../fonts/PlayfairDisplaySC-Black.ttf") format("truetype");
+}
 #bloco00 {
   display: flex;
   margin-top: 30px;
   justify-content: space-between;
   align-items: center;
   font-size: 1.3em;
+  font-family: "PlayfairDisplay";
 }
 
+#bloco01 {
+  font-family: "fontInter";
+}
 #bloco01 #img_mobile {
   height: 320px;
 }
 #bloco01 #img_desktop {
   height: 300px;
 }
-#bloco01 h1 {
-  font-size: 3em;
-  line-height: 1em;
-  margin-top: 20px;
-}
 
 #bloco02 {
-  display: flex;
-  flex-wrap: wrap;
+  font-family: "fontInter";
+}
+#bloco02 h1 {
+  font-size: 3em;
+  line-height: 1em;
+  margin-bottom: 20px;
 }
 #bloco02 p {
   color: hsl(236, 13%, 42%);
@@ -47,6 +54,7 @@
   background-color: hsl(240, 100%, 5%);
   padding: 20px;
   padding-bottom: 1px;
+  font-family: "fontInter";
 }
 #bloco03 h2 {
   color: hsl(35, 77%, 62%);
@@ -54,14 +62,14 @@
 #bloco03 h3 {
   color: white;
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 #bloco03 h3:hover {
   color: hsl(35, 77%, 62%);
   cursor: pointer;
 }
 #bloco03 p {
-  color: hsl(236, 13%, 42%);
+  color: hsl(236, 20%, 69%);
   margin-bottom: 30px;
 }
 
@@ -69,6 +77,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 50px;
+  font-family: "fontInter";
 }
 #bloco04 .sub_bloco {
   display: flex;
@@ -91,6 +100,7 @@
   font-weight: bolder;
   font-size: 1.1em;
   margin-bottom: 5px;
+  color: black;
 }
 #bloco04 .sub_bloco .text_sub_bloco .p_bolder:hover {
   color: hsl(5, 85%, 63%);
@@ -99,13 +109,13 @@
 #bloco04 .sub_bloco .text_sub_bloco p {
   font-size: 0.9em;
   line-height: 1.6em;
+  color: hsl(236, 13%, 42%);
 }
 
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  font-family: "fontInter";
 }
 
 #campo_menu_mobile {
@@ -118,6 +128,7 @@
   width: 70%;
   height: 1850px;
   padding: 20px;
+  font-family: "fontInter";
 }
 #campo_menu_mobile #campo_texts_menu {
   margin-top: 100px;
@@ -143,7 +154,8 @@ body {
   padding: 20px;
   width: 70%;
   margin: auto;
-  row-gap: 20px;
+  row-gap: 40px;
+  column-gap: 15px;
 }
 #conteudo #icon_menu {
   cursor: pointer;
@@ -151,15 +163,17 @@ body {
 #conteudo #barraSuperior_de_menu {
   display: none;
   justify-content: end;
+  font-family: "fontInter";
 }
 #conteudo #barraSuperior_de_menu p {
   margin-left: 20px;
+  font-size: 0.8em;
 }
 #conteudo #barraSuperior_de_menu p:hover {
   cursor: pointer;
   color: hsl(35, 77%, 62%);
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1460px) {
   #conteudo #img_mobile {
     display: none;
   }
@@ -172,13 +186,60 @@ body {
   #conteudo #barraSuperior_de_menu {
     display: flex;
   }
+  #conteudo #conteudo {
+    border: 20px solid blue;
+  }
+  #conteudo #bloco00 {
+    grid-column: 1/4;
+  }
+  #conteudo #bloco01 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  #conteudo #bloco02 {
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1/2;
+    grid-row: 3;
+  }
+  #conteudo #bloco02 h1 {
+    max-width: 280px;
+  }
+  #conteudo #bloco02 p {
+    max-width: 360px;
+    margin-right: 15px;
+  }
+  #conteudo #bloco02 button {
+    width: 200px;
+    height: 50px;
+    font-size: 1em;
+  }
+  #conteudo #bloco03 {
+    grid-column: 3;
+    grid-row: 2/4;
+    height: 98%;
+    max-width: 690px;
+  }
+  #conteudo #bloco03 h2 {
+    font-size: 2em;
+  }
+  #conteudo #bloco03 p {
+    font-size: 0.8em;
+    line-height: 1.7em;
+  }
+  #conteudo #bloco04 {
+    grid-column: 1/4;
+  }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1460px) {
   #conteudo #img_mobile {
     display: block;
   }
   #conteudo #img_desktop {
     display: none;
+  }
+  #conteudo #bloco02 {
+    flex-wrap: wrap;
   }
 }
 
