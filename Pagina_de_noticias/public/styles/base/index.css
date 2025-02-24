@@ -69,7 +69,7 @@
   cursor: pointer;
 }
 #bloco03 p {
-  color: hsl(236, 20%, 69%);
+  color: hsl(233, 8%, 79%);
   margin-bottom: 30px;
 }
 
@@ -185,9 +185,6 @@ body {
   }
   #conteudo #barraSuperior_de_menu {
     display: flex;
-  }
-  #conteudo #conteudo {
-    border: 20px solid blue;
   }
   #conteudo #bloco00 {
     grid-column: 1/4;

@@ -107,15 +107,6 @@ body
             display: flex;
         }
 
-
-        //.................................
-
-            #conteudo
-            {
-                
-                border: 20px solid blue;
-            }
-
             #bloco00 
             {
                 grid-column: 1/ 4;
@@ -172,10 +163,8 @@ body
                 grid-column: 1/4;
             
             }
-        //................................
     }
        
-    
     @media screen and (max-width:1460px) {
     
         #img_mobile
@@ -188,11 +177,9 @@ body
             display: none;
         }
 
-         //.................................
          #bloco02 
          {
             flex-wrap: wrap;
          }
-        //................................
     }
 }   
