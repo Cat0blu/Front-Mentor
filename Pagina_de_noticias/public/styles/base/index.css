@@ -2,17 +2,12 @@
   font-family: "fontInter";
   src: url("../../fonts/Inter-VariableFont_slnt_wght.ttf") format("truetype");
 }
-@font-face {
-  font-family: "PlayfairDisplay";
-  src: url("../../fonts/PlayfairDisplaySC-Black.ttf") format("truetype");
-}
 #bloco00 {
   display: flex;
   margin-top: 30px;
   justify-content: space-between;
   align-items: center;
   font-size: 1.5em;
-  font-family: "PlayfairDisplay";
 }
 
 #bloco01 {
@@ -32,6 +27,7 @@
 }
 #bloco02 h1 {
   font-size: 3em;
+  font-weight: 900;
   line-height: 1em;
   margin-bottom: 20px;
 }
