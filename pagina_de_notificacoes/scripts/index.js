@@ -3,7 +3,7 @@ let num_notification = document.querySelector('#num_notification')
 let text_all_read = document.querySelector("#text_all_read")
 let msgText = document.querySelector("#msgText")
 
-window.alert('3°test mobile')
+window.alert('4°test mobile')
 
 elements.forEach((element)=>{
     element.addEventListener('click', ()=>{
