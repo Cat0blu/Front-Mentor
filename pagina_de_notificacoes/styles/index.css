@@ -5,6 +5,13 @@
     src: url("../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
   }
 
+  @media screen and (max-width:700px) {
+    #conteudo
+    {
+        height: 100vh;
+    }
+  }
+
   * {
     padding: 0px;
     margin: 0px;
@@ -22,10 +29,12 @@
     background-color: white;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.068);
     width: 80%;
-    max-height: 780px;
-    border-radius: 10px;
     min-width: 420px;
     max-width: 670px;
+    max-height: 780px;
+  
+    border-radius: 10px;
+   
     padding: 20px 20px 5px 20px;
   }
   #conteudo .campo_icon {
