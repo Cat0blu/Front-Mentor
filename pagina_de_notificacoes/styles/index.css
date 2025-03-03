@@ -5,7 +5,7 @@
     src: url("../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
   }
 
-  @media screen and (max-width:700px) {
+  @media screen and (max-width:900px) {
     #conteudo
     {
         height: 100vh;
