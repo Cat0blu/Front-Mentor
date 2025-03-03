@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "PlusJakartaSan";
+    src: url("../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+  }
+
+  * {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "PlusJakartaSan";
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(210, 60%, 98%);
+  }
+  #conteudo {
+    background-color: white;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.068);
+    width: 80%;
+    max-height: 780px;
+    border-radius: 10px;
+    min-width: 420px;
+    max-width: 670px;
+    padding: 20px 20px 5px 20px;
+  }
+  #conteudo .campo_icon {
+    display: inline-block;
+  }
+  #conteudo .campo_icon > .icon_msg_unread {
+    border-radius: 50%;
+    background-color: hsl(1, 90%, 64%);
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+  }
+  #conteudo .img_icon {
+    margin-right: 10px;
+    height: 40px;
+  }
+  #conteudo .div_main {
+    color: hsl(219, 12%, 42%);
+    display: block;
+   
+  }
+  #conteudo .div_main .campoText {
+    display: inline;
+    color: hsl(224, 21%, 14%);
+    font-weight: 100;
+    margin-right: 5px;
+  }
+  #conteudo .div_main .campoText:hover {
+    color: hsl(219, 85%, 26%);
+  }
+  .div_main .tempo_msg {
+    display: block;
+    color: hsl(219, 14%, 63%);
+   
+  }
+  #conteudo .textBlue {
+    color: hsl(224, 21%, 14%);
+    margin-left: 5px;
+    font-weight: bolder;
+  }
+  #conteudo .textBlue:hover {
+    color: hsl(219, 85%, 26%);
+  }
+  #conteudo .bloco_img_coment .img_coment {
+    height: 40px;
+  }
+  #conteudo #bloco04 {
+    display: flex;
+    justify-content: space-between;
+  }
+  #conteudo #msgText {
+    background-color: white;
+    color: hsl(219, 12%, 42%);
+    display: none;
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    max-width: 550px;
+    margin-left: 50px;
+  }
+  #conteudo #msgText:hover {
+    background-color: hsl(211, 68%, 94%);
+    transition: background-color 0.6s;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  header p {
+    display: inline;
+    font-weight: 1000;
+    font-size: 1.2em;
+  }
+  header #num_notification {
+    position: relative;
+    bottom: 2px;
+    background-color: hsl(219, 85%, 26%);
+    color: white;
+    border-radius: 5px;
+    padding: 1px 10px 1px 10px;
+    margin-left: 2px;
+    font-size: 1em;
+    font-weight: bolder;
+  }
+  header #text_all_read {
+    opacity: 0.8;
+  }
+  header #text_all_read:hover {
+    color: hsl(219, 85%, 26%);
+    cursor: pointer;
+    font-weight: bolder;
+    transition: color 0.6s, bolder 0.6s;
+  }
+  
+  main {
+    margin-top: 20px;
+  }
+  
+  main > * {
+    background-color: hsl(211, 68%, 94%);
+    display: flex;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 7px;
+    cursor: pointer;
+  }
