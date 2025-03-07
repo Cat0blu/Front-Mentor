@@ -1,0 +1,329 @@
+
+@font-face {
+    font-family: "DMSans-Italic";
+    src: url("../fonts/DMSans-VariableFont_opsz\,wght.ttf") format("truetype");
+}
+
+@media screen and (max-width: 900px){
+    #conteudo 
+    {
+        height: 100vh;
+    }
+
+    #conteudo > *
+    {
+        max-width: 280px;
+    }
+
+    #b00 > h1 
+    {
+        font-size: 2.2em;
+    }
+
+    #b01 > img 
+    {
+        height: 50px;
+
+    }
+
+    #b02 
+    {   
+        height: 200px;
+    }
+
+    #b02 > img 
+    {
+        height: 110px;
+    }
+
+
+    #b03 > img 
+    {
+        height: 210px;
+    }
+
+
+    #b03 > p 
+    {
+        width: 200px;
+        text-align: center;
+    }
+    #b04 
+    {
+        flex-direction: column;
+    }
+
+    #b04 > h1 
+    {
+        text-align: center;
+    }
+
+    #b05 > p
+    {
+       
+        margin-bottom: 10px;
+    }
+
+    
+    
+}
+
+@media screen and (min-width:900px) {
+    #conteudo 
+    {  
+        gap: 20px;
+        grid-template-rows: repeat(3, 60px) repeat(2,90px) repeat(2,80px);
+        grid-template-columns: 180px 227px 190px 200px;
+        grid-template-areas: " b06 b00 b00 b03 "
+                             " b06 b00 b00 b03"
+                             " b06 b00 b00 b03"
+                             " b06 b01 b02 b03 "
+                             " b07 b01 b02 b03 " 
+                             " b07 b05 b04 b04 "
+                             " b07 b05 b04 b04 ";
+    }
+
+    #conteudo > * 
+    {
+        overflow: hidden;
+    }
+
+
+    #b00 
+    {
+        grid-area: b00;
+    }
+
+    #b00 > h1 
+    {
+        font-size: 3em;
+    }  
+    
+    #b01
+    {
+        grid-area: b01;
+    }
+
+    #b01 > img 
+    {
+        height: 60px;
+
+    }
+
+    #b02
+    {
+        grid-area: b02;
+    }
+
+    #b02 > img 
+    {
+        height: 110px;
+    }
+
+
+    #b03
+    {
+        grid-area: b03;
+        overflow: hidden;
+    }
+
+    #b03 > img 
+    {
+        height: 250px;
+    }
+
+    #b04
+    {
+        grid-area: b04;
+    }
+
+    #b05
+    {
+        grid-area: b05;
+    }
+
+   
+
+    #b06
+    {
+        grid-area: b06;
+        display: flex;
+        justify-content: center;
+        flex-direction: column
+    }
+
+    #b07
+    {
+        grid-area: b07;
+    }
+
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "DMSans-Italic";
+    font-weight: 500;
+    line-height: 1em;
+}
+
+body 
+{   
+    background-color: rgb(243, 242, 235);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#conteudo 
+{   
+    display: grid;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+#conteudo > * 
+{
+    padding: 20px;
+}
+
+#b00 
+{
+    background-color: hsl(256, 67%, 59%);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+
+
+#b00 > p 
+{
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+#img_fiveStars
+{
+    height: 20px;
+    margin-top: 20px;
+}
+
+#b01
+{   
+    background-color: white;
+   
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+} 
+
+
+
+
+#b02 
+{   
+    background-color: hsl(39, 100%, 71%);
+    border-radius: 10px;
+    overflow: hidden;
+   
+}
+
+#b02 > h2 
+{
+    margin-bottom: 10px;
+}
+
+
+#b03 
+{
+    background-color: hsl(254, 88%, 90%);
+    border-radius: 10px;
+}
+
+#b03 > h2 
+{
+    margin-bottom: 20px;
+}
+
+
+
+#b03 > p 
+{
+    font-size: 0.9em;
+    margin: 10px auto;
+}
+#b04 
+{   
+    background-color: hsl(256, 67%, 59%);
+    color: white;
+    display: flex;
+    align-items: center;
+    
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#b04 > img 
+{
+    width: 150px;
+    height: 150px;
+
+}
+
+
+
+#b05 
+{  
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#b05 > h2
+{
+    font-size: 2em;
+}
+
+#b05 > p
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+#b05 > img 
+{
+    height: 50px;
+}
+
+#b06 
+{
+
+    background-color: hsl(31, 66%, 93%);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#b06 > img 
+{
+    height: 60px;
+    margin-top: 10px;
+}
+
+#b07 
+{
+    background-color: hsl(39, 100%, 71%);
+    border-radius: 10px;
+    padding:10px ;
+   
+}
+
+#b07 > img 
+{
+    height: 150px;
+    margin-top: 20px;
+}
