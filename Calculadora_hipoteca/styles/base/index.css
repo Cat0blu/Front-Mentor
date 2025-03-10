@@ -1,0 +1,87 @@
+#b00 {
+  padding: 10px 20px 10px 20px;
+}
+#b00 h2 {
+  color: hsl(202, 55%, 16%);
+}
+#b00 p, #b00 label, #b00 a {
+  color: hsl(200, 24%, 40%);
+}
+#b00 label {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+#b00 input {
+  padding: 11px;
+  width: 100%;
+  padding-left: 30px;
+  border-radius: 5px;
+  border: none;
+  outline: 1px solid rgb(0, 0, 0);
+}
+#b00 .iconCmp {
+  padding: 10px;
+  background-color: hsl(202, 86%, 94%);
+  position: relative;
+  bottom: 27px;
+  border-radius: 5px;
+}
+#b00 button {
+  background-color: hsl(61, 70%, 52%);
+  color: hsl(202, 55%, 16%);
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px 10px 20px;
+  margin: 10px 0px 10px 0px;
+}
+#b00 button img {
+  height: 15px;
+  margin-right: 10px;
+}
+#b00 #cmp_rds div {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+#b00 #cmp_rds div label {
+  display: inline;
+  padding-left: 10px;
+}
+#b00 #cmp_rds div input {
+  width: auto;
+  outline: none;
+}
+
+#b01 {
+  background-color: hsl(202, 55%, 16%);
+  padding: 20px;
+}
+#b01 h2 {
+  color: white;
+}
+#b01 p {
+  color: hsl(202, 86%, 94%);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  border: 2px solid black;
+  max-width: 300px;
+}
+
+/*# sourceMappingURL=index.css.map */

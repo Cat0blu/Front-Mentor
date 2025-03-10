@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de amortização de hipoteca</title>
+    <link rel="shortcut icon" href="imgs/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/base/index.css">
+</head>
+<body>
+    <main>
+        <div id="b00">
+            <h2>Mortgage Calculator</h2>
+
+            <a href="#">Clear All</a>
+            
+            
+
+            <label for="valor_inicial">Mortgage Amount</label>
+            
+            <input type="text" id="valor_inicial">
+            <span class="iconCmp">E</span>
+
+            
+
+            <label for="prazo_pagamento">Mortgage Term</label>
+            
+            <input type="text" id="prazo_pagamento">
+            <span class="iconCmp">years</span>
+
+            
+
+            <label for="taxa">Interesr Rate</label>
+            
+            <input type="text" id="taxa">
+            <span class="iconCmp">%</span>
+
+            
+
+            <div id="cmp_rds">
+                <p>Mortage Type</p>
+                <div>
+                    <input type="radio" id="repayment" name="radios"> <label for="repayment">Repayment</label>
+                </div>
+                
+                <div>
+                    <input type="radio"  id="interest_only" name="radios">
+                    <label for="interest_only"> Interest Only</label>
+                </div>
+            </div>
+            
+            
+
+            <button><img src="imgs/icon-calculator.svg" alt="img.svg">Calculate Repayments</button>
+        </div>
+
+        <div id="b01">
+            <img src="imgs/illustration-empty.svg" alt="img.svg">
+
+            <h2>Results shown here</h2>
+
+            <p>Complete the form and click "calculate repayments" to see what your monthly repayments wouls be.</p>
+        </div>
+    </main>
+</body>
+</html>
