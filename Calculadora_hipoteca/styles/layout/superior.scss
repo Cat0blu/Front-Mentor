@@ -9,11 +9,9 @@
         h2 
         {
             color:  hsl(202, 55%, 16%);
-    
         }
     }
     
-   
     p, label, a
     {
         color: hsl(200, 24%, 40%);
@@ -44,9 +42,8 @@
        
         span 
         {
-            position: relative;//codigo repetido
-            bottom: 54px;//codigo repetido
-            
+            position: relative;
+            bottom: 54px;
         }
     
     }
@@ -82,10 +79,8 @@
         border-radius: 5px;
     }
 
-    
     #cmp_rds
     {   
-       
         p 
         {
             margin-bottom: 10px;
@@ -119,9 +114,7 @@
                 background-color: #FAFAE1;
                 transition: background-color 0.5s, border 0.5s;
             }
-
         }
-
     }
 
     button 
@@ -131,6 +124,7 @@
         font-weight: bolder;
         display: flex;
         justify-content: center;
+        align-items: center;
         border: none;
         border-radius: 20px;
         padding: 10px 20px 10px 20px;
@@ -139,10 +133,9 @@
         max-width: 300px;
         img 
         {
-            height: 15px;
+            height: 20px;
             margin-right: 10px;
         }
-        
     }
 
     button:hover 
@@ -150,5 +143,4 @@
         opacity: 0.8;
         cursor: pointer;
     }
-
 }

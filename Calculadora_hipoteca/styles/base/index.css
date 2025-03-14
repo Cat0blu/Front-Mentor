@@ -78,6 +78,7 @@
   font-weight: bolder;
   display: flex;
   justify-content: center;
+  align-items: center;
   border: none;
   border-radius: 20px;
   padding: 10px 20px 10px 20px;
@@ -85,7 +86,7 @@
   max-width: 300px;
 }
 #b00 button img {
-  height: 15px;
+  height: 20px;
   margin-right: 10px;
 }
 #b00 button:hover {
@@ -184,7 +185,7 @@ main {
   overflow: hidden;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   body {
     height: 100vh;
   }
@@ -239,7 +240,7 @@ main {
     height: 150px;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   main {
     max-width: 350px;
     grid-template-areas: "b00" "b01";
@@ -247,14 +248,20 @@ main {
   main #b00 input {
     width: 100%;
   }
+  main #b00 #cmp01, main #b00 #cmp02 {
+    margin-top: 40px;
+  }
   main #b00 #cmp01 > span {
-    left: 240px;
+    left: 241px;
   }
   main #b00 #cmp02 > span {
-    left: 266px;
+    left: 267px;
   }
   main #b00 #cmp_rds {
-    margin-top: 20px;
+    margin-top: 40px;
+  }
+  main #b00 button {
+    margin-top: 40px;
   }
 }
 .erro {

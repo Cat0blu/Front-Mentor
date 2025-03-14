@@ -48,9 +48,13 @@ button_calcular.addEventListener("click", ()=>{
         valor_hipoteca.nextElementSibling.nextElementSibling.classList.remove("erro_icon")
         valor_hipoteca.nextElementSibling.style.visibility = "hidden"
 
-        valor_hipoteca =  Number(valor_hipoteca.value)
+        valor_hipoteca = Number(valor_hipoteca.value)
+
+        console.log(valor_hipoteca)
         valor_hipoteca === 0 ? valor_hipoteca = 1 : valor_hipoteca = valor_hipoteca
         document.querySelector("#valor_inicial").value = valor_hipoteca.toFixed(2)
+
+        console.log("valor_hipoteca:",typeof(toString(valor_hipoteca)))
 
         ok = true
     }
@@ -152,8 +156,8 @@ button_calcular.addEventListener("click", ()=>{
     
             console.log(`Elementos encontrados: ${valor_hipoteca}, ${prazo}, ${taxa}, ${taxa_mensal}; Pagamento mensal: ${pagamento_mensal.toFixed(2)}; Pagamento total ao longo do tempo: ${pagamento_total.toFixed(2)}`)
 
-            document.querySelector("#valor_mensal > h2").innerHTML = "R$"+ pagamento_mensal.toFixed(2)
-            document.querySelector("#valor_final > h3").innerHTML = "R$"+ pagamento_total.toFixed(2)
+            document.querySelector("#valor_mensal > h2").innerHTML = pagamento_mensal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+            document.querySelector("#valor_final > h3").innerHTML =  pagamento_total.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
     
         }
 
@@ -166,8 +170,8 @@ button_calcular.addEventListener("click", ()=>{
         let valor_mensal = valor_hipoteca * taxa_mensal
         let valor_total = valor_mensal * prazo
 
-        document.querySelector("#valor_mensal > h2").innerHTML = "R$"+ valor_mensal.toFixed(2)
-        document.querySelector("#valor_final > h3").innerHTML = "R$"+ valor_total.toFixed(2)
+        document.querySelector("#valor_mensal > h2").innerHTML = valor_mensal.toFixed(2)
+        document.querySelector("#valor_final > h3").innerHTML = valor_total.toFixed(2)
     }
     
     else 
