@@ -1,7 +1,11 @@
 #b00 {
-  padding: 10px 20px 10px 20px;
+  padding: 30px 20px 20px 20px;
+  grid-area: b00;
 }
-#b00 h2 {
+#b00 #initial_texts {
+  line-height: 2em;
+}
+#b00 #initial_texts h2 {
   color: hsl(202, 55%, 16%);
 }
 #b00 p, #b00 label, #b00 a {
@@ -9,79 +13,268 @@
 }
 #b00 label {
   display: block;
+  margin-top: 15px;
   margin-bottom: 10px;
-  margin-top: 20px;
 }
 #b00 input {
-  padding: 11px;
-  width: 100%;
-  padding-left: 30px;
+  padding: 15px;
   border-radius: 5px;
   border: none;
-  outline: 1px solid rgb(0, 0, 0);
+  outline: 1px solid hsl(200, 24%, 40%);
+}
+#b00 .cmps {
+  color: hsl(200, 24%, 40%);
+  height: 80px;
+}
+#b00 .cmps span {
+  position: relative;
+  bottom: 54px;
+}
+#b00 #cmp00 input {
+  padding-left: 45px;
+}
+#b00 #cmp00:hover span, #b00 #cmp01:hover span, #b00 #cmp02:hover span {
+  background: hsl(61, 70%, 52%) !important;
+  transition: background-color 0.6s;
+}
+#b00 #cmp00:hover input, #b00 #cmp01:hover input, #b00 #cmp02:hover input {
+  outline: 1px solid hsl(61, 70%, 52%) !important;
+  transition: outline 0.5s;
 }
 #b00 .iconCmp {
-  padding: 10px;
+  padding: 12px;
   background-color: hsl(202, 86%, 94%);
-  position: relative;
-  bottom: 27px;
+  transform: translateY(250px);
   border-radius: 5px;
 }
-#b00 button {
-  background-color: hsl(61, 70%, 52%);
-  color: hsl(202, 55%, 16%);
-  display: flex;
-  align-items: center;
-  border: none;
-  border-radius: 20px;
-  padding: 10px 20px 10px 20px;
-  margin: 10px 0px 10px 0px;
-}
-#b00 button img {
-  height: 15px;
-  margin-right: 10px;
+#b00 #cmp_rds p {
+  margin-bottom: 10px;
 }
 #b00 #cmp_rds div {
-  border: 1px solid black;
+  border: 1px solid hsl(200, 24%, 40%);
   border-radius: 5px;
   padding: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 #b00 #cmp_rds div label {
+  color: hsl(202, 55%, 16%);
+  font-weight: bolder;
   display: inline;
   padding-left: 10px;
 }
 #b00 #cmp_rds div input {
   width: auto;
   outline: none;
+  accent-color: hsl(61, 70%, 52%);
+}
+#b00 #cmp_rds div:hover {
+  border: 1px solid hsl(61, 70%, 52%);
+  background-color: #FAFAE1;
+  transition: background-color 0.5s, border 0.5s;
+}
+#b00 button {
+  background-color: hsl(61, 70%, 52%);
+  color: hsl(202, 55%, 16%);
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px 10px 20px;
+  width: 100%;
+  max-width: 300px;
+}
+#b00 button img {
+  height: 15px;
+  margin-right: 10px;
+}
+#b00 button:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 #b01 {
   background-color: hsl(202, 55%, 16%);
   padding: 20px;
+  grid-area: b01;
 }
-#b01 h2 {
+#b01 #standard {
+  display: block;
+}
+#b01 #standard img {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+#b01 #standard h2 {
   color: white;
+  text-align: center;
+  margin-bottom: 20px;
 }
-#b01 p {
-  color: hsl(202, 86%, 94%);
+#b01 #standard p {
+  color: hsl(203, 41%, 72%);
+  text-align: center;
+  line-height: 1.5em;
+  max-width: 440px;
+}
+#b01 #result {
+  display: none;
+}
+#b01 #result h2, #b01 #result h3 {
+  color: white;
+  margin-bottom: 1em;
+}
+#b01 #result p {
+  color: hsl(203, 41%, 72%);
+  max-width: 430px;
+}
+#b01 #result #cmp_result {
+  margin-top: 2em;
+  background-color: #0E2532;
+  border-top: 5px solid hsl(61, 70%, 52%);
+  border-radius: 10px;
+  padding: 20px;
+}
+#b01 #result #cmp_result hr {
+  border: 1px solid hsla(203, 41%, 72%, 0.295);
+}
+#b01 #result #cmp_result #valor_mensal h2 {
+  color: hsl(61, 70%, 52%);
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  margin-top: 10px;
+}
+#b01 #result #cmp_result #valor_final p {
+  margin-top: 2em;
+  margin-bottom: 10px;
 }
 
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url("../../fonts/static/PlusJakartaSans-Medium.ttf") format("truetype");
+}
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "PlusJakartaSans";
 }
 
 main {
+  display: grid;
   border: 2px solid black;
-  max-width: 300px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    border-radius: 20px;
+    grid-template-areas: "b00 b01";
+  }
+  main #b00 {
+    width: 500px;
+  }
+  main #b00 h2 {
+    display: inline-block;
+  }
+  main #b00 a {
+    float: right;
+  }
+  main #b00 #cmp00 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  main #b00 #cmp00 input {
+    width: 100%;
+  }
+  main #b00 #cmp01 {
+    display: inline-block;
+    width: 210px;
+  }
+  main #b00 #cmp01 input {
+    width: 220px;
+    padding-left: 5px;
+  }
+  main #b00 #cmp01 span {
+    left: 155px;
+  }
+  main #b00 #cmp02 {
+    display: inline-block;
+    width: 210px;
+    margin-left: 25px;
+  }
+  main #b00 #cmp02 input {
+    width: 220px;
+    padding-left: 5px;
+  }
+  main #b00 #cmp02 span {
+    left: 180px;
+  }
+  main #b01 {
+    border-bottom-left-radius: 60px;
+  }
+  main #b01 #standard img {
+    margin-top: 7em;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 700px) {
+  main {
+    max-width: 350px;
+    grid-template-areas: "b00" "b01";
+  }
+  main #b00 input {
+    width: 100%;
+  }
+  main #b00 #cmp01 > span {
+    left: 240px;
+  }
+  main #b00 #cmp02 > span {
+    left: 266px;
+  }
+  main #b00 #cmp_rds {
+    margin-top: 20px;
+  }
+}
+.erro {
+  outline: 1px solid red !important;
+}
+
+.erro_icon {
+  background-color: red !important;
+  color: white;
+}
+
+.error_text {
+  visibility: hidden;
+  color: red !important;
+}
+
+.selecionado {
+  border: none !important;
+  outline: 1px solid yellow;
+  background-color: #FAFAE1;
 }
 
 /*# sourceMappingURL=index.css.map */

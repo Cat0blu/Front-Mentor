@@ -1,86 +1,154 @@
 
 #b00 
 {   
-    padding: 10px 20px 10px 20px;
-    h2 
-    {
-        color:  hsl(202, 55%, 16%);
+    padding: 30px 20px 20px 20px;
+    grid-area: b00;
+    #initial_texts
+    {   
+        line-height: 2em;
+        h2 
+        {
+            color:  hsl(202, 55%, 16%);
     
+        }
     }
+    
    
     p, label, a
     {
         color: hsl(200, 24%, 40%);
     }
 
+
     label 
     {   display: block;
+        margin-top: 15px;
         margin-bottom: 10px;
-        margin-top: 20px;
-       
+    
     }
 
     input 
     {
-        padding: 11px;
-        width: 100%;
-        padding-left: 30px;
+        padding: 15px;
         border-radius: 5px;
         border: none;
-        outline: 1px solid rgb(0, 0, 0);
+        outline: 1px solid hsl(200, 24%, 40%);
+        
+    }
+
+    .cmps
+    {
+        color: hsl(200, 24%, 40%);
+        height: 80px;
+
+       
+        span 
+        {
+            position: relative;//codigo repetido
+            bottom: 54px;//codigo repetido
+            
+        }
+    
+    }
+
+    #cmp00 
+    {
+        input 
+        {
+            padding-left: 45px;
+        }
+    }
+
+    #cmp00:hover,#cmp01:hover, #cmp02:hover
+    {   
+        span 
+        {
+            background: hsl(61, 70%, 52%) !important;
+            transition: background-color 0.6s;
+        }
+        input
+        {
+            outline: 1px solid hsl(61, 70%, 52%) !important;
+            transition: outline 0.5s;
+        }
+        
     }
 
     .iconCmp
     {
-        padding: 10px;
+        padding: 12px;
         background-color: hsl(202, 86%, 94%);
-        position: relative;
-        bottom: 27px;
+        transform: translateY(250px);
         border-radius: 5px;
     }
 
-    button 
-    {   
-        background-color: hsl(61, 70%, 52%);
-        color: hsl(202, 55%, 16%);
-        display: flex;
-        align-items: center;
-        border: none;
-        border-radius: 20px;
-        padding: 10px 20px 10px 20px;
-        img 
-        {
-            height: 15px;
-            margin-right: 10px;
-        }
-        margin: 10px 0px 10px 0px;
-    }
-
+    
     #cmp_rds
-    {
+    {   
+       
+        p 
+        {
+            margin-bottom: 10px;
+        }
         div 
         {   
-            border: 1px solid black;
+            border: 1px solid hsl(200, 24%, 40%);
             border-radius: 5px;
             padding: 10px;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            
+           
             label 
-            {
-                 display: inline;
-             
-                 padding-left: 10px ;
+            {   
+                color: hsl(202, 55%, 16%);
+                font-weight: bolder;
+                display: inline;
+                padding-left: 10px ;
             }
      
             input 
             {
              width: auto;
              outline: none;
-            
+             accent-color:   hsl(61, 70%, 52%);;
             }
-        }
-      
 
-  
+            &:hover 
+            {
+                border: 1px solid hsl(61, 70%, 52%);
+                background-color: #FAFAE1;
+                transition: background-color 0.5s, border 0.5s;
+            }
+
+        }
+
+    }
+
+    button 
+    {   
+        background-color: hsl(61, 70%, 52%);
+        color: hsl(202, 55%, 16%);
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px 10px 20px;
+        
+        width: 100%;
+        max-width: 300px;
+        img 
+        {
+            height: 15px;
+            margin-right: 10px;
+        }
+        
+    }
+
+    button:hover 
+    {
+        opacity: 0.8;
+        cursor: pointer;
     }
 
 }

@@ -6,60 +6,85 @@
     <title>Calculadora de amortização de hipoteca</title>
     <link rel="shortcut icon" href="imgs/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/base/index.css">
+    <script src="scripts/index.js" defer></script>
 </head>
-<body>
+<body >
     <main>
         <div id="b00">
-            <h2>Mortgage Calculator</h2>
-
-            <a href="#">Clear All</a>
-            
-            
-
-            <label for="valor_inicial">Mortgage Amount</label>
-            
-            <input type="text" id="valor_inicial">
-            <span class="iconCmp">E</span>
+            <div id="initial_texts">
+                <h2>Mortgage Calculator</h2>
+                <a href="#" id="clear_all">Clear All</a>
+            </div>
 
             
+            <div id="cmp00" class="cmps">
+                <label for="valor_inicial">Mortgage Amount</label>
+                <input type="number" id="valor_inicial" min="1">
+                <p class="error_text">This field is required</p>
+                <span class="iconCmp" id="valorRS">R$</span>
+            </div>
 
-            <label for="prazo_pagamento">Mortgage Term</label>
-            
-            <input type="text" id="prazo_pagamento">
-            <span class="iconCmp">years</span>
+            <div id="cmp01" class="cmps">
+                <label for="prazo_pagamento">Mortgage Term</label>
+                <input type="number" id="prazo_pagamento" min="1">
+                <p class="error_text">This field is required</p>
+                <span class="iconCmp">years</span>
+            </div>
 
-            
-
-            <label for="taxa">Interesr Rate</label>
-            
-            <input type="text" id="taxa">
-            <span class="iconCmp">%</span>
-
-            
+            <div id="cmp02" class="cmps">
+                <label for="taxa">Interesr Rate</label>
+                <input type="number" id="taxa" min="1" >
+                <p class="error_text">This field is required</p>
+                <span class="iconCmp">%</span>
+            </div>
 
             <div id="cmp_rds">
                 <p>Mortage Type</p>
                 <div>
-                    <input type="radio" id="repayment" name="radios"> <label for="repayment">Repayment</label>
+                    <input type="radio" id="repayment" name="radios"> 
+                    <label for="repayment">Repayment</label>
                 </div>
                 
                 <div>
                     <input type="radio"  id="interest_only" name="radios">
                     <label for="interest_only"> Interest Only</label>
                 </div>
+                <p class="error_text">This field is required</p>
             </div>
             
-            
-
-            <button><img src="imgs/icon-calculator.svg" alt="img.svg">Calculate Repayments</button>
+            <button id="calcular"><img src="imgs/icon-calculator.svg" alt="img.svg" >Calculate Repayments</button>
         </div>
 
         <div id="b01">
-            <img src="imgs/illustration-empty.svg" alt="img.svg">
+            <div id="standard">
+                <img src="imgs/illustration-empty.svg" alt="img.svg">
+                <h2>Results shown here</h2>
+                <p>Complete the form and click "calculate repayments" to see what your monthly repayments wouls be.</p>
+            </div>
 
-            <h2>Results shown here</h2>
+            <div id="result">
+                <h2>
+                    Your results
+                </h2>
+                <p>Your results ares shown below based on the information you provided. To adjust the resultd, edit the form and click "calculate repayments" again.</p>
 
-            <p>Complete the form and click "calculate repayments" to see what your monthly repayments wouls be.</p>
+                <div id="cmp_result">
+                    <div id="valor_mensal">
+                        <p>Yout monthly repayments</p>
+                        <h2>
+                            R$1.000,00
+                        </h2>
+                    </div>
+
+                    <hr>
+
+                    <div id="valor_final">
+                        <p>Total you'll repay over the term</p>
+                        <h3>R$ 112.000,00</h3>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </main>
 </body>

@@ -1,5 +1,7 @@
 @use "layout/superior.scss";
 @use "layout/inferior.scss";
+@use "base/config.scss";
+
 
 * {
     padding: 0px;
@@ -7,16 +9,183 @@
     box-sizing: border-box;
 }
 
+// tirando as setinhas spinners em alguns navegadores
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 body 
 {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "PlusJakartaSans";
+   
 }
 
 main 
-{
-    
+{   
+    display: grid;
     border: 2px solid black;
-    max-width: 300px;
+    overflow: hidden;
 }
+
+@media screen and (min-width:700px) {
+    body 
+    {
+        height: 100vh;
+    }
+    main  
+    {   
+        border-radius: 20px;
+        grid-template-areas: "b00 b01";
+        #b00 
+        {   
+                  
+            width: 500px;
+            h2 
+            {
+               
+                display: inline-block;
+            }
+            a 
+            {
+                float: right;
+            }
+            #cmp00 
+            {
+                width: 100%;
+                margin-bottom: 20px;
+
+                input
+                {
+                    width: 100%;
+                }
+            }
+
+            #cmp01
+            {
+                display: inline-block;
+                width: 210px;
+                
+                input 
+                {
+                    width: 220px;
+                    padding-left: 5px;
+                }
+
+                span 
+                { 
+                    left: 155px;
+                }
+               
+            }
+
+            #cmp02
+            { 
+                display: inline-block;
+                width: 210px;
+                margin-left: 25px;
+
+                input 
+                {
+                    width: 220px;
+                    padding-left: 5px;
+                }
+
+                span 
+                { 
+                    left: 180px;
+                }
+            }
+
+
+        }
+
+        #b01 
+        {   
+            border-bottom-left-radius: 60px ;
+            #standard
+            {   
+                img 
+                {  
+                    margin-top: 7em;
+                    height: 150px;
+                }
+               
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    main 
+    {
+        max-width: 350px;
+        grid-template-areas: "b00"
+                             "b01";
+
+       #b00 
+       {    
+            
+            input 
+            {
+                width: 100%;
+            }
+
+            #cmp01 > span
+            {   
+                left: 240px;
+    
+            }
+            #cmp02 > span 
+            {
+                left: 266px;
+                
+               
+            }
+
+            #cmp_rds
+            {
+                margin-top: 20px;
+            }
+
+         
+       }                      
+    }
+}
+
+
+.erro {
+    outline: 1px solid red !important;
+}
+
+.erro_icon 
+{
+    background-color: red !important;
+    color: white;
+    
+}
+
+.error_text 
+{   
+    visibility: hidden;
+    color: red !important;
+}
+
+.selecionado
+{
+  border: none !important;
+  outline: 1px solid yellow;
+  background-color: #FAFAE1;
+}
+
