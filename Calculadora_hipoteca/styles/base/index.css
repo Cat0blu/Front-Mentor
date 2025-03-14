@@ -28,13 +28,14 @@
 }
 #b00 .cmps span {
   position: relative;
-  bottom: 54px;
+  bottom: 53px;
 }
 #b00 #cmp00 input {
   padding-left: 45px;
 }
 #b00 #cmp00:hover span, #b00 #cmp01:hover span, #b00 #cmp02:hover span {
   background: hsl(61, 70%, 52%) !important;
+  border-bottom: 1px solid hsl(61, 70%, 52%);
   transition: background-color 0.6s;
 }
 #b00 #cmp00:hover input, #b00 #cmp01:hover input, #b00 #cmp02:hover input {
@@ -46,6 +47,7 @@
   background-color: hsl(202, 86%, 94%);
   transform: translateY(250px);
   border-radius: 5px;
+  border-bottom: 1px solid hsl(200, 24%, 40%);
 }
 #b00 #cmp_rds p {
   margin-bottom: 10px;

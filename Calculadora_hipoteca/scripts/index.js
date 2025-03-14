@@ -33,7 +33,6 @@ button_calcular.addEventListener("click", ()=>{
     //[Error]
     if(valor_hipoteca.value == "" || ["e,E"].includes(valor_hipoteca))
     {
-        console.log("[Error]")
         valor_hipoteca.classList.add("erro")
         valor_hipoteca.nextElementSibling.nextElementSibling.classList.add("erro_icon")
         valor_hipoteca.nextElementSibling.style.visibility = "visible"
@@ -43,26 +42,21 @@ button_calcular.addEventListener("click", ()=>{
 
     else
     {   
-
         valor_hipoteca.classList.remove("erro")
         valor_hipoteca.nextElementSibling.nextElementSibling.classList.remove("erro_icon")
         valor_hipoteca.nextElementSibling.style.visibility = "hidden"
 
         valor_hipoteca = Number(valor_hipoteca.value)
 
-        console.log(valor_hipoteca)
         valor_hipoteca === 0 ? valor_hipoteca = 1 : valor_hipoteca = valor_hipoteca
         document.querySelector("#valor_inicial").value = valor_hipoteca.toFixed(2)
 
-        console.log("valor_hipoteca:",typeof(toString(valor_hipoteca)))
 
         ok = true
     }
 
-
     if(prazo.value == "" || ["e,E"].includes(prazo))
         {
-            console.log("[Error]")
             prazo.classList.add("erro")
             prazo.nextElementSibling.nextElementSibling.classList.add("erro_icon")
             prazo.nextElementSibling.style.visibility = "visible"
@@ -83,10 +77,8 @@ button_calcular.addEventListener("click", ()=>{
             ok1 = true
         }
 
-    
     if(taxa.value == "" || ["e,E"].includes(taxa))
         {
-            console.log("[Error]")
             taxa.classList.add("erro")
             taxa.nextElementSibling.nextElementSibling.classList.add("erro_icon")
             taxa.nextElementSibling.style.visibility = "visible"
@@ -113,7 +105,6 @@ button_calcular.addEventListener("click", ()=>{
     {   
         if(elem.checked)
         {   
-            console.log("elem:" + elem)
             elem = elem.id
             campo_rds.querySelector(".error_text").style.visibility = "hidden"
             break
@@ -123,12 +114,10 @@ button_calcular.addEventListener("click", ()=>{
         {
             elem = false
             campo_rds.querySelector(".error_text").style.visibility = "visible"
-            console.log("tudo falso")
         }
     }
 
    
-
     if(ok && ok1 && ok2 && elem)//comparando se algum dos campos deu erro
     {
         standard.style.display = "none" 
@@ -139,7 +128,6 @@ button_calcular.addEventListener("click", ()=>{
     else 
     {
         tudo_ok = false
-        console.log("não está ok!")
     }
 
   
@@ -154,8 +142,6 @@ button_calcular.addEventListener("click", ()=>{
             let pagamento_mensal = valor_hipoteca * taxa_mensal/(1-(1+taxa_mensal)**-prazo)
             let pagamento_total = pagamento_mensal * prazo
     
-            console.log(`Elementos encontrados: ${valor_hipoteca}, ${prazo}, ${taxa}, ${taxa_mensal}; Pagamento mensal: ${pagamento_mensal.toFixed(2)}; Pagamento total ao longo do tempo: ${pagamento_total.toFixed(2)}`)
-
             document.querySelector("#valor_mensal > h2").innerHTML = pagamento_mensal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
             document.querySelector("#valor_final > h3").innerHTML =  pagamento_total.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
     
@@ -173,10 +159,4 @@ button_calcular.addEventListener("click", ()=>{
         document.querySelector("#valor_mensal > h2").innerHTML = valor_mensal.toFixed(2)
         document.querySelector("#valor_final > h3").innerHTML = valor_total.toFixed(2)
     }
-    
-    else 
-    {
-        console.log("diferente de todas as condições")
-    }
-
 })
