@@ -30,7 +30,7 @@ button_calcular.addEventListener("click", ()=>{
     let rds = document.getElementsByName("radios")  //nodeList  
     let ok,ok1,ok2,tudo_ok
 
-    //[Error]
+
     if(valor_hipoteca.value == "" || ["e,E"].includes(valor_hipoteca))
     {
         valor_hipoteca.classList.add("erro")
@@ -98,7 +98,7 @@ button_calcular.addEventListener("click", ()=>{
 
             ok2 = true
         }
-    //[Error]
+
 
  
     for(var elem of rds )
@@ -156,7 +156,7 @@ button_calcular.addEventListener("click", ()=>{
         let valor_mensal = valor_hipoteca * taxa_mensal
         let valor_total = valor_mensal * prazo
 
-        document.querySelector("#valor_mensal > h2").innerHTML = valor_mensal.toFixed(2)
-        document.querySelector("#valor_final > h3").innerHTML = valor_total.toFixed(2)
+        document.querySelector("#valor_mensal > h2").innerHTML = valor_mensal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        document.querySelector("#valor_final > h3").innerHTML = valor_total.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
     }
 })

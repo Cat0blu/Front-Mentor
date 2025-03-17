@@ -26,10 +26,6 @@
   color: hsl(200, 24%, 40%);
   height: 80px;
 }
-#b00 .cmps span {
-  position: relative;
-  bottom: 53px;
-}
 #b00 #cmp00 input {
   padding-left: 45px;
 }
@@ -45,9 +41,9 @@
 #b00 .iconCmp {
   padding: 12px;
   background-color: hsl(202, 86%, 94%);
-  transform: translateY(250px);
+  position: relative;
+  bottom: 53px;
   border-radius: 5px;
-  border-bottom: 1px solid hsl(200, 24%, 40%);
 }
 #b00 #cmp_rds p {
   margin-bottom: 10px;
@@ -84,6 +80,7 @@
   border: none;
   border-radius: 20px;
   padding: 10px 20px 10px 20px;
+  margin-bottom: 1em;
   width: 100%;
   max-width: 300px;
 }
