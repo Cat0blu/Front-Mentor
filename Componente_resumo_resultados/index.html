@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componente de resumo de resultados</title>
+    <link rel="shortcut icon" href="imgs/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/base/index.css">
+</head>
+<body>
+    
+    <main>
+        <div id="header_conteudo">
+            <p>Your Result</p>
+            <div id="circu_num">
+                <h1>76</h1>
+                <p>of 100</p>
+            </div>
+
+            <div id="bloco_text">
+                <h2>Great</h2>
+                <p>You scored higher than 65% of the people who have taken these tests.</p>
+            </div>
+        </div>
+
+        <div id="main_conteudo">
+            <h3>Summary</h3>
+
+            <div class="textNum_result" id="reaction">
+                <div>
+                    <span>
+                        <img src="imgs/icon-reaction.svg" alt="img.svg">
+                    </span>
+                    <span class="text_result"></span>
+                </div>
+
+                <span class="num_result"></span>
+            </div>
+
+            <div class="textNum_result" id="memory">
+                <div>
+                    <span>
+                        <img src="imgs/icon-memory.svg" alt="img.svg">
+                    </span>
+                    <span class="text_result"></span>
+                </div>
+
+                <span class="num_result"></span>
+            </div>
+
+            <div class="textNum_result" id="verbal">
+                <div>
+                    <span>
+                        <img src="imgs/icon-verbal.svg" alt="img.svg">
+                    </span>
+                    <span class="text_result"></span>
+                </div>
+
+                <span class="num_result"></span>
+            </div>
+
+            <div class="textNum_result" id="visual">
+                <div>
+                    <span>
+                        <img src="imgs/icon-visual.svg" alt="img.svg">
+                    </span>
+                    <span class="text_result"></span>
+                </div>
+
+                <span class="num_result"></span>
+            </div>
+
+            <button>
+                Continue
+            </button>
+        </div>
+    </main>
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>

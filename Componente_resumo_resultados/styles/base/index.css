@@ -1,0 +1,156 @@
+@font-face {
+  font-family: "hankenGrotesk";
+  src: url("../../fonts/HankenGrotesk-VariableFont_wght.ttf") format("truetype");
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "hankenGrotesk";
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(221, 100%, 96%);
+}
+body main {
+  background-color: hsl(0, 0%, 100%);
+}
+body main #header_conteudo {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  width: 375px;
+}
+body main #header_conteudo p {
+  opacity: 0.7;
+  font-size: 18px;
+}
+body main #header_conteudo #circu_num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 1.5em 0;
+}
+body main #header_conteudo #circu_num h1 {
+  font-size: 3.5em;
+}
+body main #header_conteudo #circu_num p {
+  opacity: 0.4;
+}
+body main #header_conteudo #bloco_text {
+  text-align: center;
+}
+body main #header_conteudo #bloco_text p {
+  opacity: 0.7;
+  margin: 10px 0px 1em;
+}
+body main #main_conteudo {
+  color: hsl(224, 30%, 27%);
+  padding: 20px;
+  width: 375px;
+}
+body main #main_conteudo h3 {
+  margin: 1em 0;
+}
+body main #main_conteudo div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main #main_conteudo .textNum_result {
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+body main #main_conteudo .textNum_result .text_result {
+  margin-left: 10px;
+}
+body main #reaction {
+  background: hsla(0, 100%, 67%, 0.048);
+}
+body main #reaction:hover {
+  background: hsla(0, 100%, 67%, 0.5);
+}
+body main #reaction .text_result {
+  color: hsl(0, 100%, 67%);
+}
+body main #memory {
+  background: hsla(39, 100%, 56%, 0.048);
+}
+body main #memory:hover {
+  background: hsla(39, 100%, 56%, 0.5);
+}
+body main #memory .text_result {
+  color: hsl(39, 100%, 56%);
+}
+body main #verbal {
+  background: hsla(166, 100%, 37%, 0.048);
+}
+body main #verbal:hover {
+  background: hsla(166, 100%, 37%, 0.5);
+}
+body main #verbal .text_result {
+  color: hsl(166, 100%, 37%);
+}
+body main #visual {
+  background: hsla(234, 85%, 45%, 0.048);
+}
+body main #visual:hover {
+  background: hsla(234, 85%, 45%, 0.5);
+}
+body main #visual .text_result {
+  color: hsl(234, 85%, 45%);
+}
+body main button {
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+  display: block;
+  border: none;
+  margin: auto;
+  padding: 20px;
+  border-radius: 30px;
+  width: 330px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+body main button:hover {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  #bloco_text {
+    width: 290px;
+  }
+}
+@media screen and (min-width: 700px) {
+  body {
+    height: 100vh;
+    align-items: center;
+  }
+  main {
+    display: flex;
+    border-radius: 30px;
+  }
+  main #header_conteudo {
+    border-radius: 30px;
+  }
+  main #bloco_text {
+    width: 250px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

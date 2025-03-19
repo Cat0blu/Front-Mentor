@@ -1,0 +1,217 @@
+
+@use "utills.scss";
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "hankenGrotesk"
+}
+
+
+body 
+{
+    display: flex;
+    justify-content: center;
+    background-color: utills.$pale_blue;
+    main 
+    {
+        background-color: utills.$white;
+        #header_conteudo 
+        {   
+            background: linear-gradient( utills.$light_slate_blue, utills.$light_roya_blue);
+            color: utills.$white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            width: 375px;
+            p 
+            {
+                opacity: 0.7;
+                font-size: 18px;
+            }
+            #circu_num
+            {   
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background: linear-gradient(utills.$violet_blue, utills.$persian_blue);
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                margin: 1.5em 0;
+                h1 
+                {
+                    font-size: 3.5em;
+                }
+                p 
+                {
+                    opacity: 0.4;
+                }
+            }
+
+            #bloco_text 
+            {
+                text-align: center;
+                p 
+                {
+                    opacity: 0.7;
+                    margin: 10px 0px 1em ;
+                    
+                }
+            }
+        }
+
+        #main_conteudo 
+        {
+            color: utills.$dark_gray_blue;
+            padding: 20px;
+            width: 375px;
+            h3 
+            {
+                margin: 1em 0;
+            }
+
+            div 
+            {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+           
+
+            .textNum_result
+            {   
+                border-radius: 10px;
+                padding: 10px;
+                margin-bottom: 15px;
+
+                .text_result
+                {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        #reaction 
+        {   
+            background:  hsla(0, 100%, 67%, 0.048);
+            &:hover 
+            {
+                background:  hsla(0, 100%, 67%, 0.5);
+
+            }
+
+            .text_result
+            {
+                color: utills.$light_red;
+            }
+        }
+
+        #memory 
+        {
+            background: hsla(39, 100%, 56%, 0.048);
+
+            &:hover 
+            {
+                background: hsla(39, 100%, 56%, 0.5);
+            }
+            .text_result 
+            {
+                color: utills.$orangey_yellow;
+            }
+
+
+        }
+
+        #verbal 
+        {
+            background: hsla(166, 100%, 37%, 0.048);
+
+            &:hover 
+            {
+                background: hsla(166, 100%, 37%, 0.5);
+            }
+
+            .text_result 
+            {
+                color:utills.$green_teal;
+            }
+        }
+
+        #visual 
+        {
+            background: hsla(234, 85%, 45%, 0.048);
+
+            &:hover 
+            {
+                background: hsla(234, 85%, 45%, 0.5);
+            }
+
+            .text_result 
+            {
+                color: utills.$cobalt_blue;
+            }
+        }
+
+        button 
+        {
+            background-color: utills.$dark_gray_blue;
+            color: utills.$white;
+            display: block;
+            border: none;
+            margin: auto;
+            padding: 20px;
+            border-radius: 30px;
+            width: 330px;
+            font-size: 18px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            
+            &:hover 
+            {
+                background: linear-gradient( utills.$light_slate_blue, utills.$light_roya_blue);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    #bloco_text 
+    {
+        width: 290px;
+
+    }    
+}
+
+@media screen and (min-width:700px) {
+
+    body 
+    {
+        height: 100vh;
+        align-items: center;
+    }
+    main 
+    {
+        display: flex;
+        border-radius: 30px ;
+        #header_conteudo 
+        {
+           border-radius: 30px;
+        }
+
+        #bloco_text 
+        {
+            width: 250px;
+        
+        }    
+
+    }
+}
