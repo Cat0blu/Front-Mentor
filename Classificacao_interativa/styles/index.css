@@ -1,0 +1,162 @@
+
+@font-face {
+    font-family: "Overpass";
+    src: url("../fonts/Overpass-VariableFont_wght.ttf");
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(216, 12%, 8%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Overpass";
+}
+
+main 
+{   
+    background: hsl(213, 19%, 18%);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#cmp_star 
+{   
+    background: hsl(218, 18%, 27%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1em;
+}
+
+p {
+    color: hsl(217, 12%, 63%);
+    margin: 1em 0;
+    font-size: 15px;
+}
+
+#cmp_circu_num
+{
+    display: flex;
+    justify-content: space-between;
+    width:320px;
+    margin: auto;
+}
+
+.circu_num 
+{
+    background: hsl(218, 18%, 27%);
+    border-radius: 50%;
+    color: hsl(217, 12%, 63%);
+    border: none;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 0.7em 0;
+}
+
+.circu_num:hover 
+{
+    background: hsl(25, 97%, 53%);
+    color: hsl(216, 12%, 8%);
+    transition: background-color 0.6s, color 0.6s;
+}
+
+.clickado 
+{
+    background: hsl(0, 0%, 100%);
+    color:hsl(216, 12%, 8%);
+}
+
+#btn_submit
+{   
+    background: hsl(25, 97%, 53%);
+    color: hsl(216, 12%, 8%);
+    border: none;
+    border-radius: 30px;
+    display: block;
+    padding: 15px;
+    width: 320px;
+    margin: 1em auto;
+    font-weight: bolder;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#btn_submit:hover 
+{
+    background: hsl(0, 0%, 100%);
+    transition: background-color 0.6s;
+}
+
+
+#cmp01 
+{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#cmp01 > img 
+{
+    margin-top: 1em;
+}
+
+#result_avaliacao
+{   
+    background: hsl(218, 18%, 27%);
+    color: hsl(25, 97%, 53%);
+   
+    border-radius: 30px;
+    font-size: 15px;
+    margin-top: 2em;
+    padding: 5px 20px;
+}
+
+#cmp01 > h2 
+{
+    margin-top: 1em;
+}
+
+#cmp01 > p 
+{
+    
+    text-align: center;
+}
+
+@media screen and (max-width:800px) {
+    #cmp00 > p 
+    {
+        width: 310px;
+    }
+
+    #cmp01 > p 
+    {
+        width: 310px;
+    }
+}
+
+@media screen and (min-width:800px) {
+    #cmp00 > p
+    {
+        width: 340px;
+    }
+
+    #cmp01 > p 
+    {
+        width: 340px;
+    }
+}
