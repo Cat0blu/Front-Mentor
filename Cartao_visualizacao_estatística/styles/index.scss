@@ -1,0 +1,150 @@
+
+@use "utills.scss";
+
+* 
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+body 
+{
+   background: utills.$very_dark_blue;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   font-family: "Inter-VariableFont";
+}
+
+#root 
+{   
+    display: grid;
+    color: white;
+    
+    background: utills.$dark_desaturated_blue;
+    border-radius: 10px;
+    #conteudo_main 
+    {
+        grid-area: conteudo;
+        padding: 10px;
+    }
+    #img_main
+    {   
+        
+        opacity: 0.5;
+        grid-area: img;
+        
+    }
+
+    h1 {
+       
+       text-align: center;
+       margin: auto;
+       margin-top: 1em;
+
+       #textSublinhado 
+       {
+        color: utills.$soft_violet;;
+       }
+    }
+
+    #p_main 
+    {   
+        color: utills.$slightly_transparent_white;
+        line-height: 1.5em;
+        width: 290px;
+        
+        
+        margin: auto;
+    }
+
+    #bloco_values 
+    {
+        margin: 2em auto;
+        text-align: center;
+        p 
+        {
+            font-size:15px ;
+        }
+
+        .value 
+        {
+            font-weight: bolder;
+            font-size: 1.5em;
+            line-height: 1.5em;
+        }
+
+        .text 
+        {
+            color: utills.$slightly_transparent_white;
+            margin-bottom:20px ;
+            
+        }
+    }
+}
+
+
+@media screen and (max-width:800px) {
+    #root  
+    {  
+        text-align: center;
+        grid-template-areas: "img"
+                            "conteudo";
+                            width: 320px;
+       #img_main
+       {
+            width: 320px;
+            height: 240px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+       } 
+       
+       h1{
+            width: 260px;
+       }
+
+       #bloco_values 
+       {
+            width: 200px;
+       }
+       
+    }
+}
+
+@media screen and (min-width:800px) {
+    #root  
+    {   
+        height: 372px;
+        grid-template-areas: "conteudo img";
+        #conteudo_main
+        {   
+            width: 450px;
+            h1 
+            {
+                width: 330px;
+                
+                margin-bottom: 1em;
+            }
+    
+            #bloco_values 
+            {
+                display: flex;
+                justify-content: space-between;
+                width: 300px;
+            }
+        }
+
+        #img_main 
+        {   
+            width: 450px;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+
+       
+    }
+}
