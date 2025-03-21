@@ -1,7 +1,7 @@
 # PROJECT: Componente de cartão de pré-visualização de estatísticas #
 
 ## Sobre: 
-- . 
+- um layout simples com mudanças nos diferentes tipos de tela. 
 
 ## Ferramentas utilizada
 
