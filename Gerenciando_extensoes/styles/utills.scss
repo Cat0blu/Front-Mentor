@@ -1,0 +1,19 @@
+
+// Reset
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "NotoSans";
+  }
+  
+// Tamanhos de telas 
+$mobile: 600px;
+$tablet: 900px;
+$desktop: 1200px;
+
+//font
+@font-face {
+    font-family: "NotoSans";
+    src: url("../../fonts/NotoSans-VariableFont_wdth,wght.ttf") format("truetype");
+}

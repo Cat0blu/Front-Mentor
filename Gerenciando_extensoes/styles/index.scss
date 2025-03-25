@@ -1,0 +1,359 @@
+ @use "utills.scss";
+
+
+ body 
+ {  
+   min-height: 100vh;
+   padding: 20px;
+
+   #modal_delete
+   {
+    display: none;
+    background: white;
+    width: 250px;
+    height: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    margin:0px 40%;
+    padding: 10px;
+    #top_modal
+    {
+      display: flex;
+      #close_modal 
+      { 
+        background: red;
+        color: white;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 50px;
+        height: 20px;
+        margin-left: 5px;
+        &:hover 
+        {
+          &:hover
+          {
+            background: rgb(165, 2, 2);
+          }
+        }
+        
+      }
+    }
+
+    #bottom_modal 
+    { 
+      display: flex;
+      justify-content: space-around;
+      align-items: end;
+ 
+      height: 60px;
+      #del 
+      {
+        background: red;
+        color: white;
+        border-radius: 10px ;
+        padding: 5px;
+        cursor: pointer;
+        &:hover
+        {
+          background: rgb(165, 2, 2);
+        }
+        
+      }
+      #not-del 
+      {
+        background: green;
+        color: white;
+        border-radius: 10px;
+        padding: 5px;
+        cursor: pointer;
+        &:hover
+        {
+          background: rgb(0, 78, 0);
+        }
+       
+      }
+    }
+    
+    
+   }
+   main 
+   {
+    min-width: 350px;
+   }
+   #content_head 
+   {  
+      max-width: 1235px;
+      margin: auto;
+      #sub_title 
+      { 
+        background: hsl(200, 60%, 99%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+   
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.075);
+
+        #moon_cmp, #sun_cmp
+        { 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 30%;
+          background: hsl(0, 0%, 93%);
+          width: 50px;
+          height: 50px;
+          &:hover 
+          {
+            background: hsl(0, 0%, 78%);
+            cursor: pointer;
+            transition: background-color 0.6s;
+          }
+
+          &:active
+          {
+            border: 2px solid purple;
+          }
+        }
+
+        #sun_cmp 
+        { 
+         display: none;
+         background: hsl(225, 23%, 24%);
+         &:hover 
+         {
+          background: hsl(226, 11%, 37%) !important;
+         }
+        }
+
+      }
+
+      #title_and_nav 
+      { 
+        display: flex;
+        align-items: center;
+        padding: 2em 0 2em ;
+        flex-wrap: wrap;
+       
+        text-align: center;
+      
+        nav {
+            display: flex;
+            justify-content: space-between;
+            width: 280px;
+            
+            
+            span
+            {
+              border-radius: 20px;
+              padding: 10px 20px;
+              cursor: pointer;
+            } 
+
+            .selected
+            {
+              background: hsl(3, 71%, 56%);
+            }
+            }
+      }
+   }
+
+   #content_body 
+   {
+    
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+    
+     .cmp_content 
+     {
+        margin-right: 15px;
+        margin-top: 15px;
+        background: hsl(200, 60%, 99%);
+        border-radius: 20px;
+        padding: 20px;
+        max-width: 400px;
+        height: 200px;
+        box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.075);
+        
+        .part_top 
+        {
+          display: flex;
+          align-items: start;
+          margin-bottom: 1.5em;
+          .img_icon 
+          {
+            margin-right: 1em;
+          }
+          .paragraphs
+          {
+            opacity: 0.6;
+          }
+        }
+
+        .part_bottom 
+        { 
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          
+          .remove 
+          { 
+            padding: 7px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+          }
+
+          .button_active_inactive 
+          {
+            background: hsl(3, 71%, 56%);
+            border-radius: 20px;
+            border: none;
+            width: 40px;
+            height: 20px;
+            cursor: pointer;
+
+            span 
+            {
+              background: hsl(200, 60%, 99%);
+              border-radius: 50%;
+              width: 17px;
+              height: 17px;
+            }
+
+            .active 
+            {
+              float: right;
+            }
+
+            .inactive 
+            { 
+              float: left;
+            }
+            
+          }
+        }
+     }
+   }
+
+   @media (max-width:utills.$mobile)
+   {
+    h1, nav
+    {
+      margin: auto;
+    }
+
+    nav 
+    {
+      margin-top: 1em;
+    }
+   }
+
+   @media (min-width:utills.$mobile)
+   {
+    #title_and_nav 
+    {
+      justify-content: space-between;
+    }
+   }
+   
+ }
+
+ .night
+ {
+
+  background: linear-gradient(180deg, #040918 0%, #091540 100%);
+
+  color: white;
+  #sub_title, .cmp_content
+    { 
+      background: hsl(226, 25%, 17%) !important;
+       
+    }  
+
+    #title_and_nav > nav > span
+            {
+              background: hsl(226, 25%, 17%) ;
+              color: rgb(255, 255, 255) ;
+              cursor: pointer;
+              &:hover 
+              {
+                background: hsl(226, 11%, 37%) ;
+                transition: background-color 0.6s ;
+              }
+            } 
+
+            .selected
+            {
+              color: hsl(227, 75%, 14%) !important;
+              font-weight: bolder;
+            }
+
+            .remove 
+            { 
+              color: white;
+              background: hsl(226, 25%, 17%);
+              padding: 7px 15px;
+              border-radius: 20px;
+              border: 1px solid rgba(255, 255, 255, 0.199);
+              cursor: pointer;
+            }
+  
+            .remove:hover 
+            {
+              background: hsl(3, 71%, 56%);
+              color: rgb(0, 0, 0);
+              border: none;
+              transition: background-color 0.5s, border 0.4s;
+  
+            } 
+    
+ }
+
+.light
+ {
+  background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+
+  #title_and_nav > nav > span
+      { 
+        background: hsl(200, 60%, 99%);
+        color: black;
+        cursor: pointer;
+        &:hover 
+        {
+          color: hsl(226, 11%, 37%);
+          transition: color 0.6s;
+        }
+      }
+
+   .selected
+   {
+    color: white !important;
+ 
+   } 
+
+  
+   .remove 
+   { 
+     background: hsl(200, 60%, 99%);
+     border: 1px solid rgba(0, 0, 0, 0.199);
+
+   }
+
+   .remove:hover 
+   {
+     background: hsl(3, 71%, 56%);
+     color: white;
+     border: none;
+     transition: background-color 0.5s, border 0.4s;
+
+   }
+ }

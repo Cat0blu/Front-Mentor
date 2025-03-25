@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gerenciador de extensão</title>
+    <link rel="stylesheet" href="styles/base/index.css">
+    <link rel="shortcut icon" href="imgs/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <!--Modal-->
+    <div id="modal_delete">
+        <div id="top_modal">
+            <div id="modal_texts">
+                Deseja Mesmo Deletar essa extensão. Ela não podera mais ser utilizada.
+            </div>
+            <span id="close_modal">x</span>
+        </div>
+        <div id="bottom_modal">
+            <span id="del">Deletar</span>
+            <span id="not-del">Not-Deletar</span>
+        </div>
+    </div><!--Modal-->
+
+    <main>
+        <div id="content_head">
+            <div id="sub_title">
+                <span id="cmp_icon_img"> </span>
+                <span id="moon_cmp"><img src="imgs/icon-moon.svg" alt="img.svg"></span>
+                <span id="sun_cmp"> <img src="imgs/icon-sun.svg" alt="img.svg"></span>
+            </div>
+
+            <div id="title_and_nav">
+                <h1>Extensions List</h1>
+                <nav><span id="all_content" class="selected">All</span> <span id="content_activate">Active</span> <span id="content_inactivate">Inactive</span></nav>
+            </div>
+        </div>
+
+        <div id="content_body"></div>
+    </main>
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>
