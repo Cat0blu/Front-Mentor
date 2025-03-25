@@ -18,7 +18,7 @@
         "isActive": false
     },
     {
-        "logo": "../imgs/logo-json-wizard.svg",
+        "logo": "https://images.pexels.com/photos/31236816/pexels-photo-31236816/free-photo-of-livraria-no-japao.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "name": "JSONWizard",
         "description": "Formats, validates, and prettifies JSON responses in-browser.",
         "isActive": true
