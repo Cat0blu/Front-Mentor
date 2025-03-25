@@ -21,6 +21,11 @@
     #top_modal
     {
       display: flex;
+
+      #modal_texts
+      {
+        color: #091540;
+      }
       #close_modal 
       { 
         background: red;

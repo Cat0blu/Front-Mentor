@@ -28,6 +28,9 @@ body #modal_delete {
 body #modal_delete #top_modal {
   display: flex;
 }
+body #modal_delete #top_modal #modal_texts {
+  color: #091540;
+}
 body #modal_delete #top_modal #close_modal {
   background: red;
   color: white;

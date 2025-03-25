@@ -158,17 +158,24 @@ function events()
                     if(button_remove)
                         {   
                             modal_delete.style.display = "block"
+                            body.style.pointerEvents = "none"
+                            modal_delete.style.pointerEvents = "auto"
                             deletar.addEventListener("click", ()=>{
                                 disparador.target.parentNode.parentNode.remove()
                                 modal_delete.style.display = "none"
+                                body.style.pointerEvents = "auto"
+                              
                             })
 
                             not_del.addEventListener("click", ()=>{
                                 modal_delete.style.display = "none"
+                                body.style.pointerEvents = "auto"
+                               
                             })
 
                             close_modal.addEventListener("click", ()=>{
                                 modal_delete.style.display = "none"
+                                body.style.pointerEvents = "auto"
                             })
                             
                         }
