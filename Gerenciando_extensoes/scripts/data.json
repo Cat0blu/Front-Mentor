@@ -6,13 +6,13 @@
         "isActive": true
     },
     {
-        "logo": "../imgs/logo-style-spy.svg",
+        "logo": "/imgs/logo-style-spy.svg",
         "name": "StyleSpy",
         "description": "Instantly analyze and copy CSS from any webpage element.",
         "isActive": true
     },
     {
-        "logo": "../imgs/logo-speed-boost.svg",
+        "logo": "/imgs/logo-speed-boost.svg",
         "name": "SpeedBoost",
         "description": "Optimizes browser resource usage to accelerate page loading.",
         "isActive": false
