@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../../fonts/Fraunces-VariableFont_.ttf") format("truetype");
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: Fraunces;
+}
+
+body {
+  background: hsl(30, 38%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+body main {
+  background: white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.116);
+  border-radius: 10px;
+}
+body main #img_desktop {
+  width: 320px;
+}
+@media (max-width: 700px) {
+  body main {
+    max-width: 350px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  body main #img_desktop {
+    display: none;
+  }
+  body main .img_produto {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  body main #btn_ {
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 700px) {
+  body main {
+    max-width: 800px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+  }
+  body main #img_mobile {
+    display: none;
+  }
+  body main .img_produto {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 100%;
+  }
+  body main #_content {
+    padding: 0 40px !important;
+  }
+  body main #_content #sub_title {
+    margin: 30px 0px 20px;
+  }
+  body main #_content h1 {
+    width: 200px;
+  }
+  body main #_content #descricao_produto {
+    width: 230px;
+    margin-top: 30px;
+  }
+}
+body main p {
+  font-size: 14px;
+}
+body main .img_produto {
+  width: 100%;
+}
+body main #_content {
+  padding: 20px;
+}
+body main #_content .title_gone {
+  color: hsl(228, 12%, 48%);
+  font-family: Montserrat;
+}
+body main #_content h1 {
+  line-height: 1em;
+  margin: 0.5em 0;
+}
+body main #_content #descricao_produto {
+  line-height: 1.5em;
+  margin-bottom: 2em;
+}
+body main #_content #values {
+  font-size: 2em;
+  color: hsl(158, 36%, 37%);
+  font-weight: bolder;
+}
+body main #_content #values span {
+  font-size: 0.5em;
+  font-weight: normal;
+  margin-left: 10px;
+}
+body main #_content #btn_ {
+  background: hsl(158, 36%, 37%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  margin-top: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+body main #_content #btn_ span {
+  margin-right: 10px;
+}
+body main #_content #btn_:hover {
+  background: hsl(158, 42%, 18%);
+}
+body main #_content #btn_:focus {
+  outline: 3px solid hsl(158, 42%, 18%);
+}
+body main #_content #btn_:active {
+  background: rgb(175, 175, 175);
+  color: black;
+}
+
+/*# sourceMappingURL=index.css.map */

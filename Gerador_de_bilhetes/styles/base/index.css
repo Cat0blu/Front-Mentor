@@ -1,0 +1,80 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  color: hsl(0, 0%, 100%);
+}
+
+body {
+  background: url("../../imgs/background-mobile.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  border: 1px solid yellow;
+  min-height: 100vh;
+}
+body header {
+  background-image: url("../../imgs/pattern-lines.svg");
+  background-size: 800px;
+  width: 350px;
+  height: 400px;
+  margin: auto;
+  padding: 50px;
+}
+body header #icons_top {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 1.5em;
+}
+body header #icons_top #logo_full {
+  border: 1px dashed black;
+  display: inline-block;
+  width: 140px;
+}
+body header #icons_top #cmp_line-top > img {
+  height: 50px;
+}
+body header #file_input {
+  display: none;
+}
+body header label {
+  background: hsla(245, 19%, 35%, 0.363);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px dashed hsl(245, 15%, 58%);
+  border-radius: 10px;
+  padding: 15px;
+  width: 90%;
+  margin: auto;
+}
+body header label > span {
+  background: hsl(245, 19%, 35%);
+  border-radius: 10px;
+  border: 1px solid hsl(252, 6%, 83%);
+  padding: 3px 5px;
+  display: flex;
+  align-items: center;
+}
+body header label > p {
+  margin-top: 1em;
+  color: hsl(252, 6%, 83%);
+}
+body main {
+  border: 1px solid black;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+body main #gerar_ticket {
+  background: hsl(7, 88%, 67%);
+  color: hsl(248, 70%, 10%);
+  font-weight: bolder;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=index.css.map */
