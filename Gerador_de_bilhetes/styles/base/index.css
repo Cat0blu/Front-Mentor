@@ -1,80 +1,207 @@
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../../fonts/Inconsolata-VariableFont_wdth,wght.ttf") format("truetype");
+}
 * {
   padding: 0px;
   margin: 0px;
   color: hsl(0, 0%, 100%);
+  font-family: Inconsolata;
 }
 
 body {
-  background: url("../../imgs/background-mobile.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center bottom;
-  border: 1px solid yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
-body header {
-  background-image: url("../../imgs/pattern-lines.svg");
-  background-size: 800px;
-  width: 350px;
-  height: 400px;
-  margin: auto;
-  padding: 50px;
-}
-body header #icons_top {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  margin-bottom: 1.5em;
-}
-body header #icons_top #logo_full {
+
+#content {
   border: 1px dashed black;
-  display: inline-block;
-  width: 140px;
+  overflow: hidden;
+  width: 100%;
 }
-body header #icons_top #cmp_line-top > img {
+#content header {
+  background-image: url("../../imgs/pattern-lines.svg");
+  background-size: 950px;
+}
+#content header #icons_top {
+  display: flex;
+  border: 1px solid rgb(255, 219, 219);
+  padding: 1em 0;
+}
+#content header #icons_top #cmp_line-top {
+  border: 1px solid rgb(255, 255, 255);
+  display: inline-block;
+}
+#content header #icons_top #cmp_line-top img {
   height: 50px;
 }
-body header #file_input {
-  display: none;
+#content header h2 {
+  text-align: center;
+  border: 1px solid rgb(250, 175, 250);
+  margin: auto;
 }
-body header label {
-  background: hsla(245, 19%, 35%, 0.363);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#content header #descricao_ {
+  color: hsl(252, 6%, 83%);
+  border: 1px solid rgb(247, 209, 139);
+  margin: 2em auto 3em;
+  text-align: center;
+}
+#content header #title_label {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+#content header #cmp_file_input {
+  background: hsla(252, 6%, 83%, 0.192);
   border: 1px dashed hsl(245, 15%, 58%);
   border-radius: 10px;
-  padding: 15px;
-  width: 90%;
-  margin: auto;
-}
-body header label > span {
-  background: hsl(245, 19%, 35%);
-  border-radius: 10px;
-  border: 1px solid hsl(252, 6%, 83%);
-  padding: 3px 5px;
-  display: flex;
-  align-items: center;
-}
-body header label > p {
-  margin-top: 1em;
-  color: hsl(252, 6%, 83%);
-}
-body main {
-  border: 1px solid black;
-  margin: auto;
   display: flex;
   flex-direction: column;
-  width: 300px;
+  align-items: center;
+  padding: 15px;
+  margin: 0 15px;
+  max-width: 400px;
+  cursor: pointer;
 }
-body main #gerar_ticket {
+#content header #cmp_file_input #file_input {
+  display: none;
+}
+#content header #cmp_file_input span {
+  background: hsl(245, 19%, 35%);
+  border: 1px solid hsl(245, 15%, 58%);
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+#content header #cmp_file_input #suggestion {
+  color: hsl(252, 6%, 83%);
+}
+#content header #cmp_file_input #img_avatar, #content header #cmp_file_input #btn_remove_img, #content header #cmp_file_input #btn_change_img {
+  display: none;
+}
+#content header #cmp_file_input #img_avatar {
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid hsl(245, 15%, 58%);
+}
+#content header #cmp_file_input #btn_remove_img, #content header #cmp_file_input #btn_change_img {
+  background: hsl(245, 19%, 35%);
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 5px;
+  text-decoration: underline;
+  margin-left: 10px;
+  cursor: pointer;
+}
+#content header #cmp_file_input #btn_remove_img:hover, #content header #cmp_file_input #btn_change_img:hover {
+  opacity: 0.6;
+}
+#content header #discretion-file_input {
+  color: hsla(252, 6%, 83%, 0.87);
+  font-size: 0.7em;
+  margin: 10px 0 2em;
+}
+#content main > * {
+  margin: 0 15px;
+}
+#content main {
+  border: 2px solid green;
+  max-width: 500px;
+}
+#content main label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#content main input {
+  background: hsla(252, 6%, 83%, 0.192);
+  border-radius: 10px;
+  border: 1px solid hsl(245, 15%, 58%);
+  padding: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+#content main input::placeholder {
+  color: hsl(252, 6%, 83%);
+}
+#content main #pattern-squiggly-mobile {
+  height: 170px;
+  margin-left: -10px;
+}
+#content main #gerar_ticket {
   background: hsl(7, 88%, 67%);
   color: hsl(248, 70%, 10%);
-  font-weight: bolder;
-  padding: 15px;
+  display: block;
   border-radius: 10px;
   border: none;
-  margin-top: 20px;
+  padding: 15px;
+  font-weight: bolder;
+  width: 100%;
+  max-width: 432px;
+  min-width: 100px;
+  position: relative;
+  bottom: 140px;
+  cursor: pointer;
+}
+#content main #circle_img {
+  position: relative;
+  bottom: 400px;
+  left: 320px;
+  height: 80px;
+}
+#content main .error {
+  color: hsl(7, 88%, 67%);
+  display: none;
+  align-items: center;
+  margin-top: 5px;
+  font-size: 0.7em;
+}
+#content main .error span {
+  margin-right: 10px;
+}
+@media (max-width: 500px) {
+  #content {
+    background-image: url("../../imgs/background-mobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    max-width: 100%;
+  }
+  #content header #icons_top {
+    justify-content: end;
+  }
+  #content header #icons_top #logo_full {
+    width: 155px;
+    border: 1px solid green;
+  }
+  #content header #icons_top #cmp_line-top img {
+    height: 50px;
+  }
+}
+@media (min-width: 500px) {
+  #content {
+    background-image: url("../../imgs/background-tablet.png");
+  }
+  #content #icons_top {
+    justify-content: center;
+    outline: 2px solid rgb(211, 46, 46);
+  }
+  #content #title_label, #content #cmp_file_input, #content #discretion-file_input {
+    margin: 10px auto !important;
+    text-align: center;
+  }
+  #content main {
+    margin: auto;
+  }
+}
+@media (min-width: 900px) {
+  #content {
+    background-image: url("../../imgs/background-desktop.png");
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

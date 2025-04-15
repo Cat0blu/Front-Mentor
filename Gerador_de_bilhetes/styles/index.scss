@@ -1,112 +1,295 @@
 
+@font-face {
+    font-family: "Inconsolata";
+    src: url("../../fonts/Inconsolata-VariableFont_wdth\,wght.ttf") format("truetype");
+}
+
+
 * {
     padding: 0px;
     margin: 0px;
     color: hsl(0, 0%, 100%);
+    font-family: Inconsolata;
 }
 
 body 
 {
-    background: url("../../imgs/background-mobile.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center bottom;
-   
-    border: 1px solid yellow;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
 
-    min-height: 100vh;
-    header {
-        background-image: url("../../imgs/pattern-lines.svg");
-        background-size: 800px;
-  
-        width: 350px;
-        height: 400px;
-        margin: auto;
-        padding: 50px;
-        
+}
 
+#content
+{
+    border: 1px dashed black;
+    overflow: hidden;
+    width: 100%;
+    header 
+    {
+        background-image: url("../../imgs/pattern-lines.svg") ;
+        background-size:950px;
         #icons_top 
         {   
             display: flex;
-            align-items: center;
-            justify-content: end;
-            margin-bottom: 1.5em;
-
             
-            #logo_full 
-            {
-                border: 1px dashed black;
+            border: 1px solid rgb(255, 219, 219);
+            padding: 1em 0;
+            
+            #cmp_line-top
+            {   
+            
+                border: 1px solid rgb(255, 255, 255);
                 display: inline-block;
-                width: 140px;
-            }
-
-         
-
-
-            #cmp_line-top > img
-            {  
-                height: 50px;
+                img 
+                {
+                    height: 50px;
+                }
             }
         }
 
-        #file_input 
+        h2
+        {   text-align: center;
+            border: 1px solid rgb(250, 175, 250);
+            
+            margin: auto;
+        }
+
+        #descricao_ 
         {
-            display: none;
+            color: hsl(252, 6%, 83%);
+            border:1px solid rgb(247, 209, 139);
+            margin: 2em auto 3em;
+            text-align: center;
+            
+     
         }
-
-        label 
+        #title_label 
+        {
+            font-size: 20px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+        #cmp_file_input 
         {   
-            background: hsla(245, 19%, 35%, 0.363);
+            background: hsla(252, 6%, 83%, 0.192);
+            border: 1px dashed hsl(245, 15%, 58%);
+            border-radius: 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            border: 1px dashed  hsl(245, 15%, 58%);
-            border-radius: 10px;
             padding: 15px;
-            width: 90%;
+            margin: 0 15px;
+            max-width: 400px;
+            cursor: pointer;
             
-            margin: auto;
+            #file_input 
+            {
+                display: none;
+            }
+            span 
+            {
+                background: hsl(245, 19%, 35%);
+                border: 1px solid hsl(245, 15%, 58%);
+                border-radius: 10px;
+                padding: 5px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 1em;
+
+            }
+            #suggestion 
+            {   
+                color: hsl(252, 6%, 83%);
+            }
+
+
+            #img_avatar, #btn_remove_img, #btn_change_img
+            {
+                display: none;
+            }
+            #img_avatar 
+            {
+                height: 50px;
+                border-radius: 10px;
+                border: 1px solid hsl(245, 15%, 58%);
+            }
+
+            #btn_remove_img, #btn_change_img
+            {
+                background: hsl(245, 19%, 35%);
+                border-radius: 5px;
+                border: 1px solid black;
+                padding: 5px;
+                text-decoration: underline;
+                margin-left: 10px;
+                cursor: pointer;
+                &:hover 
+                {
+                    opacity: 0.6;
+                }
+
+            }
+            
+        }
+
+        #discretion-file_input
+        {
+            color:  hsla(252, 6%, 83%, 0.87);
+            font-size:0.7em ;
+            margin: 10px 0 2em;
+        }
+
+    }
+
+    main > * 
+    {
+        margin: 0 15px;
+    }
+    main 
+    {   
+        border: 2px solid green;
+        max-width: 500px;
+        label 
+            {
+                display: block;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            input 
+            {
+                background: hsla(252, 6%, 83%, 0.192);
+                border-radius: 10px;
+                border: 1px solid hsl(245, 15%, 58%);
+                padding: 15px;
+                width: 100%;
+                max-width: 400px;
+                
+             
+                &::placeholder 
+                {
+                    color: hsl(252, 6%, 83%);
+                }
+
+            }
+
+            #pattern-squiggly-mobile
+            {
+                height: 170px;
+                margin-left: -10px;
+                
+            }
+            #gerar_ticket 
+            {
+                background: hsl(7, 88%, 67%);
+                color: hsl(248, 70%, 10%);
+                display: block;
+                border-radius: 10px;
+                border: none;
+                padding: 15px;
+                font-weight: bolder;
+                width: 100%;
+                max-width: 432px;
+                min-width: 100px;
+                position: relative;
+                bottom: 140px;
+                cursor: pointer;
+            }
+
+            #circle_img 
+            {
+                position: relative;
+                bottom: 400px;
+                left: 320px;
+                height: 80px;
+            }
+
+            .error 
+            {   
+                color: hsl(7, 88%, 67%);
+                display: none;
+                align-items: center;
+                margin-top: 5px;
+                font-size:0.7em ;
+                span 
+                {
+                    margin-right: 10px;
+                }
+            }
+    }
+
+    // #ticket_gerado 
+    // {
+    //     margin: auto;
+    //     display: block;
+
+    // }
+
+
+    @media (max-width:500px)// mobile
+    {
+        background-image: url("../../imgs/background-mobile.png"); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:bottom ;
+        max-width: 100%;
+        
+
+        header 
+        {
+            #icons_top
+            {
+                justify-content: end;
+                #logo_full 
+                {
+                    width: 155px;
+                    border: 1px solid green ;
+                }
+
+                #cmp_line-top
+                {   
+                    img 
+                    {
+                        height: 50px;
+                    }  
+                }      
+            }
+
+            
+        } 
+    }
+
+    @media (min-width:500px)// tablet
+    {
+        background-image: url("../../imgs/background-tablet.png"); 
+
+        #icons_top
+        {   
+           justify-content: center;
+            
+            outline: 2px solid rgb(211, 46, 46);
+        }
+
+        #title_label, #cmp_file_input, #discretion-file_input
+        {
+            margin: 10px auto !important;
            
+            text-align: center;
         }
 
-        label > span
+        main 
         {
-            background: hsl(245, 19%, 35%);
-            border-radius: 10px;
-            border: 1px solid hsl(252, 6%, 83%);
-            padding: 3px 5px;
-            display: flex;
-            align-items: center;
+            margin: auto;
         }
+      
+    }
 
-        label > p 
-        {
-            margin-top: 1em;
-            color: hsl(252, 6%, 83%);
-        }
+    @media (min-width:900px)// desktop
+    {
+        background-image: url("../../imgs/background-desktop.png"); 
        
     }
 
-    main 
-    {   
-        border: 1px solid black;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        width:300px;
-
-        #gerar_ticket 
-        {
-            background: hsl(7, 88%, 67%);
-            color: hsl(248, 70%, 10%);
-            font-weight: bolder;
-            padding: 15px;
-            border-radius: 10px;
-            border: none;
-            margin-top: 20px;
-        }
-
-    }
-
-   
 }
