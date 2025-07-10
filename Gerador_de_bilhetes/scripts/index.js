@@ -9,8 +9,12 @@ const email = document.getElementById("email")
 const git_username = document.getElementById("git_username")
 const btn_gerar_ticket = document.getElementById("gerar_ticket")
 let ok_name,ok_email,ok_git
- 
 
+ 
+const allowedTypes = ["image/jpeg", "image/png"]
+const maxSize = 500 * 1024
+
+console.log(file_input)
 
 file_input.addEventListener('change', (evt)=>{
     const file = evt.target.files[0]
@@ -19,23 +23,34 @@ file_input.addEventListener('change', (evt)=>{
     if(file)
     {
 
-        console.log(file.name)
-      
-        const reader = new FileReader()
-
-        reader.onload = (e)=>{
-            img_avatar.src = e.target.result
-            img_avatar.style.display = "block" 
-            btn_change_img.style.display = "inline-block"
-            btn_remove_img.style.display = "inline-block"
-            icon_upload.style.display = "none"
-            suggestion.style.display = "none"
-            
-           
+    if(! allowedTypes.includes(file.type) || file.size > maxSize)
+        {
+            console.log("Arquivo de image não aceito")
+            window.alert(`Image não aceita! Formato: ${file.type}; Tamanho do arquivo: ${file.size /1024} Kb`)
+            document.querySelector("#discretion-file_input").nextElementSibling.style.display = "flex"
         }
+
         
 
-        reader.readAsDataURL(file)
+        else 
+        {
+            console.log(file.name)
+            const reader = new FileReader()
+
+            reader.onload = (e)=>{
+                img_avatar.src = e.target.result
+                img_avatar.style.display = "block" 
+                btn_change_img.style.display = "inline-block"
+                btn_remove_img.style.display = "inline-block"
+                icon_upload.style.display = "none"
+                suggestion.style.display = "none"
+                
+            }
+
+            reader.readAsDataURL(file)
+        }
+        
+        
     }
 })
 
@@ -107,6 +122,9 @@ btn_gerar_ticket.addEventListener("click", ()=>{
         git_username.style.border = "1px solid hsl(245, 15%, 58%)"
         ok_git = true
     }
+
+
+  
     
 
     if(ok_name && ok_email && ok_git)

@@ -206,18 +206,7 @@ body
                 height: 80px;
             }
 
-            .error 
-            {   
-                color: hsl(7, 88%, 67%);
-                display: none;
-                align-items: center;
-                margin-top: 5px;
-                font-size:0.7em ;
-                span 
-                {
-                    margin-right: 10px;
-                }
-            }
+            
     }
 
     // #ticket_gerado 
@@ -272,10 +261,10 @@ body
             outline: 2px solid rgb(211, 46, 46);
         }
 
-        #title_label, #cmp_file_input, #discretion-file_input
+        #title_label, #cmp_file_input, #discretion-file_input,#error-discretion-file_input
         {
             margin: 10px auto !important;
-           
+            border: 1px solid white;
             text-align: center;
         }
 
@@ -293,3 +282,17 @@ body
     }
 
 }
+
+.error 
+    {   
+        color: hsl(7, 88%, 67%);
+        display: none;
+        align-items: center;
+        margin-top: 5px;
+        font-size:0.7em ;
+        
+        span 
+        {
+            margin-right: 10px;
+        }
+    }

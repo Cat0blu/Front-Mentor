@@ -153,16 +153,6 @@ body {
   left: 320px;
   height: 80px;
 }
-#content main .error {
-  color: hsl(7, 88%, 67%);
-  display: none;
-  align-items: center;
-  margin-top: 5px;
-  font-size: 0.7em;
-}
-#content main .error span {
-  margin-right: 10px;
-}
 @media (max-width: 500px) {
   #content {
     background-image: url("../../imgs/background-mobile.png");
@@ -190,8 +180,9 @@ body {
     justify-content: center;
     outline: 2px solid rgb(211, 46, 46);
   }
-  #content #title_label, #content #cmp_file_input, #content #discretion-file_input {
+  #content #title_label, #content #cmp_file_input, #content #discretion-file_input, #content #error-discretion-file_input {
     margin: 10px auto !important;
+    border: 1px solid white;
     text-align: center;
   }
   #content main {
@@ -202,6 +193,17 @@ body {
   #content {
     background-image: url("../../imgs/background-desktop.png");
   }
+}
+
+.error {
+  color: hsl(7, 88%, 67%);
+  display: none;
+  align-items: center;
+  margin-top: 5px;
+  font-size: 0.7em;
+}
+.error span {
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */
