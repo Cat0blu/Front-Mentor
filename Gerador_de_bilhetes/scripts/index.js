@@ -1,136 +1,105 @@
-const file_input = document.querySelector("#file_input")
-const img_avatar = document.querySelector("#img_avatar")
-const btn_remove_img = document.querySelector("#btn_remove_img")
-const btn_change_img = document.querySelector("#btn_change_img")
-const icon_upload = document.querySelector("#cmp_icon_upload")
-const suggestion = document.querySelector("#suggestion")
-const nome = document.getElementById("name")
-const email = document.getElementById("email")
-const git_username = document.getElementById("git_username")
-const btn_gerar_ticket = document.getElementById("gerar_ticket")
-let ok_name,ok_email,ok_git
+"use strict"
+let change_img_avatar = document.querySelector("#change_img_avatar")
+let upload_img_avatar = document.querySelector("#upload_img_avatar")
+let maxSize = 500 * 1024 //bytes
+let btns_img_loaded = document.querySelector("#btns_img_loaded") 
+let upload_img_text_info = document.querySelector("#upload_img_text_info")
+let btn_remove = document.getElementById("btn_remove")
+let btn_change = document.getElementById("btn_change")
+let full_name = document.getElementById("name_")
+let email = document.getElementById("email_")
+const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+let githuser = document.getElementById("gituser_")
+let gerar_ticket = document.getElementById("gerar_ticket")
+let ok = 0
+let date_ = new Date()
+let month = date_.toLocaleString("default", {month: "short"})
+let day = date_.getDate()
+let year = date_.getFullYear()
+let date = document.getElementById("date")
+let post_main = document.getElementById("post_main")
+let name_post_main = document.querySelectorAll(".post_main_name_")
+let email_post_main = document.querySelector(".post_main_email_")
+let gituser_post_main = document.querySelector(".post_main_gituser_")
+let img_post_main = document.querySelector("#post_main_cmp_ticket_user_img")
 
- 
-const allowedTypes = ["image/jpeg", "image/png"]
-const maxSize = 500 * 1024
+date.innerHTML = `${month}&nbsp${day},&nbsp${year}&nbsp/&nbspSão Paulo,&nbspSP`
 
-console.log(file_input)
-
-file_input.addEventListener('change', (evt)=>{
-    const file = evt.target.files[0]
+change_img_avatar.addEventListener("change", (evt)=>{
+    let file = evt.target.files[0]
     console.log(file)
-    
-    if(file)
+    if(! file)
     {
-
-    if(! allowedTypes.includes(file.type) || file.size > maxSize)
-        {
-            console.log("Arquivo de image não aceito")
-            window.alert(`Image não aceita! Formato: ${file.type}; Tamanho do arquivo: ${file.size /1024} Kb`)
-            document.querySelector("#discretion-file_input").nextElementSibling.style.display = "flex"
+        return
+    }
+    else if(file.size > maxSize)
+    {
+        console.log("Arquivo muito grande")
+    }
+    else 
+    {
+        const reader = new FileReader()
+        upload_img_avatar.classList.add("img_loaded")
+        btns_img_loaded.classList.remove("hidden")
+        upload_img_text_info.classList.add("hidden")
+        reader.onload = (arquivo)=>{
+            upload_img_avatar.src = arquivo.target.result
+            img_post_main.src = arquivo.target.result
         }
 
-        
-
-        else 
-        {
-            console.log(file.name)
-            const reader = new FileReader()
-
-            reader.onload = (e)=>{
-                img_avatar.src = e.target.result
-                img_avatar.style.display = "block" 
-                btn_change_img.style.display = "inline-block"
-                btn_remove_img.style.display = "inline-block"
-                icon_upload.style.display = "none"
-                suggestion.style.display = "none"
-                
-            }
-
-            reader.readAsDataURL(file)
-        }
-        
-        
+        reader.readAsDataURL(file)
     }
 })
 
-btn_remove_img.addEventListener("click", ()=>{
-
-    img_avatar.src = ""
-    img_avatar.style.display = "none" 
-    btn_change_img.style.display = "none"
-    btn_remove_img.style.display = "none"
-    icon_upload.style.display = "block"
-    suggestion.style.display = "block"
-   
-    
-
+btn_remove.addEventListener("click", ()=>{
+    upload_img_avatar.classList.remove("img_loaded")
+    btns_img_loaded.classList.add("hidden")
+    upload_img_text_info.classList.remove("hidden")
+    upload_img_avatar.src = "imgs/icon-upload.svg"
+})
+btn_change.addEventListener("click", ()=>{
+    change_img_avatar.click()
 })
 
-setInterval(()=>{
-    
-    if(window.getComputedStyle(btn_remove_img).display === "none")
-        {
-            file_input.disabled = false
-        }
-
-    else 
+gerar_ticket.addEventListener("click", ()=>{
+    ok = 0
+    if(Number(full_name.value) || full_name.value.length < 5)
     {
-        file_input.disabled = true
-    }    
-        
-},100)
-
-btn_gerar_ticket.addEventListener("click", ()=>{
-   
-    if(nome.value === '')
+        full_name.nextElementSibling.style.visibility = "visible" 
+    }else 
     {
-        nome.nextElementSibling.style.display = "flex"
-        nome.style.border = "1px solid hsl(7, 88%, 67%)"
-        ok_name = false
-    }
-    else 
-    {
-        nome.nextElementSibling.style.display = "none"
-        nome.style.border = "1px solid hsl(245, 15%, 58%)"
-        ok_name = true
+        full_name.nextElementSibling.style.visibility = "hidden"
+        ok ++
     }
 
-    if(email.value === '')
+    if(! regex.test(email.value))
     {
-        email.nextElementSibling.style.display = "flex"
-        email.style.border = "1px solid hsl(7, 88%, 67%)"
-        ok_email = false
+        email.nextElementSibling.style.visibility = "visible" 
+    }else 
+    {
+        email.nextElementSibling.style.visibility = "hidden"
+        ok ++
     }
 
-    else 
+    if(Number(githuser.value) || githuser.value.length < 5)
     {
-        email.nextElementSibling.style.display = "none"
-        email.style.border = "1px solid hsl(245, 15%, 58%)"
-        ok_email = true
-    }    
-
-    if(git_username.value === '')
+        githuser.nextElementSibling.style.visibility = "visible" 
+    }else 
     {
-        git_username.nextElementSibling.style.display = "flex"
-        git_username.style.border = "1px solid hsl(7, 88%, 67%)"
-        ok_git = false
-    }
-    else 
-    {
-        git_username.nextElementSibling.style.display = "none"
-        git_username.style.border = "1px solid hsl(245, 15%, 58%)"
-        ok_git = true
+        githuser.nextElementSibling.style.visibility = "hidden"
+        ok ++
     }
 
-
-  
-    
-
-    if(ok_name && ok_email && ok_git)
+    if(ok === 3)
     {
-        window.alert('Todos os parametros foram atendidos!')
+        window.alert("Você passou para a proxima tela!")
         document.querySelector("main").style.display = "none"
+        post_main.style.display = "block"
+        name_post_main.forEach((tag)=>{
+            tag.innerHTML = full_name.value
+        })
+        email_post_main.innerHTML = email.value
+        gituser_post_main.innerHTML = githuser.value
     }
-
 })
+

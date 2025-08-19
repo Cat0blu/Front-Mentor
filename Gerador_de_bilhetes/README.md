@@ -1,15 +1,17 @@
-# PROJECT: Gerador de bilhetes para conferências #
+# PROJECT: Gerador de bilhetes para conferências 
 
 ## Sobre: 
-- Neste desafio, você criará um formulário que gera um ticket.. 
+- Neste desafio Foi feito um formulário que gera tickets com foto e nome do usuario. 
+
 
 ## Ferramentas utilizada
 
-    - Html(semantica)
-    - Css e sass(estilos)
-    - Node.js(instalação de ferramentas)
+- Html(semantica)
+- Css e sass(estilos)
+- Node.js(instalação de ferramentas)
+- Js(interatividade)
  
-    
+
 ## Paletas de cores
 
 - Neutral 0: hsl(0, 0%, 100%)
