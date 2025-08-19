@@ -61,6 +61,9 @@ body main #main_title {
   text-align: center;
   margin-bottom: 20px;
 }
+body main #subtitle {
+  text-align: center;
+}
 body main form {
   width: 90%;
   max-width: 500px;
