@@ -35,10 +35,14 @@ change_img_avatar.addEventListener("change", (evt)=>{
     else if(file.size > maxSize)
     {
         console.log("Arquivo muito grande")
+        document.querySelector("#cmp_info").style.display = "none"
+        document.querySelector("#cmp_upload").nextElementSibling.style.visibility = "visible"
     }
     else 
     {
         const reader = new FileReader()
+        document.querySelector("#cmp_info").style.display = "flex"
+        document.querySelector("#cmp_upload").nextElementSibling.style.visibility = "hidden"
         upload_img_avatar.classList.add("img_loaded")
         btns_img_loaded.classList.remove("hidden")
         upload_img_text_info.classList.add("hidden")
